@@ -1,6 +1,5 @@
 /* =====================================
    1. CORES DO SITE
-   As variáveis facilitam a mudança de cores.
 ===================================== */
 
 :root {
@@ -22,8 +21,6 @@
 /* =====================================
    2. ESTILOS GERAIS
 ===================================== */
-
-/* Remove as margens automáticas */
 
 * {
     margin: 0;
@@ -52,8 +49,6 @@ a {
 h1, h2, h3, h4 {
     line-height: 1.2;
 }
-
-/* Define a largura máxima do conteúdo */
 
 .container {
     width: 90%;
@@ -97,17 +92,12 @@ h1, h2, h3, h4 {
 
 /* =====================================
    3. MODO CLARO E ESCURO
-   O checkbox muda as variáveis CSS.
 ===================================== */
-
-/* Esconde o checkbox, mas mantém o funcionamento */
 
 .theme-toggle {
     position: absolute;
     opacity: 0;
 }
-
-/* Toda a página fica dentro da classe site */
 
 .site {
     background-color: var(--fundo);
@@ -118,8 +108,7 @@ h1, h2, h3, h4 {
                 color 0.4s ease;
 }
 
-/* Quando o checkbox está selecionado,
-   as variáveis recebem as cores escuras */
+/* Muda as cores quando o checkbox está selecionado */
 
 #theme-toggle:checked ~ .site {
     --fundo: #142019;
@@ -136,8 +125,6 @@ h1, h2, h3, h4 {
     --texto-botao: #142019;
 }
 
-/* Alterna o texto do botão */
-
 .theme-dark {
     display: none;
 }
@@ -153,7 +140,6 @@ h1, h2, h3, h4 {
 
 /* =====================================
    4. BOTÕES
-   Utilizamos transições no hover.
 ===================================== */
 
 .btn {
@@ -169,7 +155,6 @@ h1, h2, h3, h4 {
 
     cursor: pointer;
 
-    /* Transição de duas propriedades */
     transition: background-color 0.3s ease,
                 transform 0.3s ease-in-out;
 }
@@ -200,7 +185,6 @@ h1, h2, h3, h4 {
 
 /* =====================================
    5. CABEÇALHO
-   Flexbox organiza os elementos.
 ===================================== */
 
 .site-header {
@@ -218,14 +202,21 @@ h1, h2, h3, h4 {
     gap: 20px;
 }
 
+/* Logotipo do IEFP */
+
 .logo {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 12px;
 
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
     color: var(--verde);
-    line-height: 1.2;
+}
+
+.logo img {
+    width: 110px;
+    height: auto;
 }
 
 .main-nav {
@@ -243,8 +234,6 @@ h1, h2, h3, h4 {
 .main-nav a:hover {
     color: var(--verde);
 }
-
-/* Botão para mudar entre os dois modos */
 
 .theme-button {
     display: inline-block;
@@ -269,7 +258,6 @@ h1, h2, h3, h4 {
 
 /* =====================================
    6. APRESENTAÇÃO INICIAL
-   Grid divide o texto e a imagem.
 ===================================== */
 
 .hero {
@@ -363,7 +351,6 @@ h1, h2, h3, h4 {
 
 /* =====================================
    8. FORMAÇÕES
-   Grid organiza os quatro cartões.
 ===================================== */
 
 .courses-section {
@@ -384,12 +371,22 @@ h1, h2, h3, h4 {
     border: 1px solid var(--borda);
     border-radius: 15px;
 
-    padding: 25px;
-    min-height: 350px;
+    padding: 20px;
+    min-height: 430px;
 
-    /* Transição do cartão */
     transition: transform 0.3s ease-out,
-                border-color 0.3s ease;
+                background-color 0.4s ease,
+                border-color 0.4s ease;
+}
+
+/* Fotografias dos cursos */
+
+.course-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .course-card:hover {
@@ -398,10 +395,10 @@ h1, h2, h3, h4 {
 }
 
 .course-number {
-    font-size: 40px;
+    font-size: 32px;
     font-weight: bold;
     color: var(--verde);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .course-area {
@@ -441,8 +438,6 @@ h1, h2, h3, h4 {
     text-decoration: underline;
 }
 
-/* Informação adicional dos cursos */
-
 .course-details {
     background-color: var(--fundo-card);
     border: 1px solid var(--borda);
@@ -464,8 +459,7 @@ h1, h2, h3, h4 {
 
 
 /* =====================================
-   9. GALERIA DE FOTOGRAFIAS
-   Flexbox e scroll horizontal.
+   9. GALERIA
 ===================================== */
 
 .gallery-section {
@@ -506,7 +500,6 @@ h1, h2, h3, h4 {
 
 /* =====================================
    10. NOTÍCIAS
-   Grid organiza os três destaques.
 ===================================== */
 
 .news-section {
@@ -527,16 +520,27 @@ h1, h2, h3, h4 {
     border: 1px solid var(--borda);
     border-radius: 15px;
 
-    padding: 30px;
+    padding: 25px;
     min-height: 300px;
 
     transition: transform 0.3s ease-out,
-                border-color 0.3s ease;
+                background-color 0.4s ease,
+                border-color 0.4s ease;
 }
 
 .news-card:hover {
     transform: translateY(-5px);
     border-color: var(--verde);
+}
+
+/* Fotografia da notícia em destaque */
+
+.news-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .news-date {
@@ -617,8 +621,6 @@ h1, h2, h3, h4 {
     font-size: 12px;
 }
 
-/* Estilos do formulário */
-
 .contact-form {
     background-color: var(--fundo-card);
     border: 1px solid var(--borda);
@@ -651,8 +653,6 @@ h1, h2, h3, h4 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Destaque quando o campo é selecionado */
-
 .form-group input:focus,
 .form-group textarea:focus {
     outline: 2px solid var(--verde);
@@ -684,9 +684,10 @@ h1, h2, h3, h4 {
     padding-bottom: 50px;
 }
 
-.footer-brand h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.footer-logo {
+    width: 130px;
+    height: auto;
+    margin-bottom: 15px;
 }
 
 .footer-brand p {
@@ -724,8 +725,7 @@ h1, h2, h3, h4 {
 
 
 /* =====================================
-   13. TRANSIÇÃO DO MODO CLARO/ESCURO
-   Suaviza as mudanças de cores.
+   13. TRANSIÇÕES DO MODO CLARO/ESCURO
 ===================================== */
 
 .about-section,
@@ -736,8 +736,6 @@ h1, h2, h3, h4 {
 .site-footer,
 .course-details,
 .contact-form,
-.course-card,
-.news-card,
 .theme-button,
 .form-group input,
 .form-group textarea {
@@ -746,19 +744,9 @@ h1, h2, h3, h4 {
                 border-color 0.4s ease;
 }
 
-/* Mantém o movimento dos cartões */
-
-.course-card,
-.news-card {
-    transition: transform 0.3s ease-out,
-                background-color 0.4s ease,
-                border-color 0.4s ease;
-}
-
 
 /* =====================================
    14. RESPONSIVIDADE
-   Media queries adaptam o site.
 ===================================== */
 
 
@@ -785,8 +773,6 @@ h1, h2, h3, h4 {
         gap: 30px;
     }
 
-    /* Os cursos passam para duas colunas */
-
     .courses-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -806,8 +792,6 @@ h1, h2, h3, h4 {
         font-size: 34px;
     }
 
-    /* Cabeçalho em coluna */
-
     .header-content {
         flex-direction: column;
     }
@@ -820,8 +804,6 @@ h1, h2, h3, h4 {
     .main-nav a {
         font-size: 12px;
     }
-
-    /* Hero com uma coluna */
 
     .hero {
         padding: 50px 0;
@@ -839,8 +821,6 @@ h1, h2, h3, h4 {
         height: 300px;
     }
 
-    /* Sobre o centro com uma coluna */
-
     .about-grid {
         grid-template-columns: 1fr;
     }
@@ -853,8 +833,6 @@ h1, h2, h3, h4 {
         flex-direction: column;
     }
 
-    /* Cursos com uma coluna */
-
     .courses-grid {
         grid-template-columns: 1fr;
     }
@@ -862,8 +840,6 @@ h1, h2, h3, h4 {
     .course-card {
         min-height: auto;
     }
-
-    /* Galeria com imagens menores */
 
     .gallery-scroll figure {
         min-width: 250px;
@@ -874,8 +850,6 @@ h1, h2, h3, h4 {
         height: 200px;
     }
 
-    /* Notícias com uma coluna */
-
     .news-grid {
         grid-template-columns: 1fr;
     }
@@ -884,13 +858,9 @@ h1, h2, h3, h4 {
         min-height: auto;
     }
 
-    /* Contactos com uma coluna */
-
     .contact-grid {
         grid-template-columns: 1fr;
     }
-
-    /* Rodapé em coluna */
 
     .footer-content {
         flex-direction: column;
