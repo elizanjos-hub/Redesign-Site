@@ -5,25 +5,50 @@
 
 ## Sobre o projeto
 
-Projeto de reformulação visual do website do IEFP Rio Meão. A proposta utiliza um estilo editorial, com tipografia de destaque, fotografias de atividades e cores inspiradas na identidade do IEFP.
+Este projeto foi desenvolvido no âmbito da formação de Desenvolvimento Web, com o objetivo de criar uma proposta de reformulação do website do IEFP Rio Meão.
 
-## Tecnologias
+A ideia foi desenvolver uma página mais moderna, organizada e intuitiva, facilitando o acesso às informações sobre o centro, as formações e as atividades realizadas.
 
-HTML5, CSS3 (Flexbox, Grid, media queries, variáveis e transições), JavaScript básico para o botão de modo e o formulário demonstrativo. **Não utiliza Bootstrap.**
+Procurei criar uma identidade visual simples, com destaque para as cores institucionais, fotografias e uma organização que tornasse a navegação mais agradável.
+
+Este é um projeto académico e não representa o website oficial do IEFP.
+
+## Objetivos
+
+Os principais objetivos foram:
+
+* Criar uma página visualmente apelativa e fácil de utilizar.
+* Organizar as informações de forma clara.
+* Aplicar HTML semântico.
+* Utilizar CSS Grid e Flexbox na construção do layout.
+* Adaptar a página a diferentes tamanhos de ecrã.
+* Implementar os modos claro e escuro.
+* Aplicar transições e efeitos de interação.
+* Criar um formulário de contacto demonstrativo.
+
+## Tecnologias utilizadas
+
+O website foi desenvolvido apenas com:
+* HTML5: estrutura e organização dos conteúdos.
+* CSS3: estilos, cores, tipografia e disposição dos elementos.
+* CSS Grid: organização das secções e dos cartões.
+* Flexbox: alinhamento de elementos e criação da galeria horizontal.
+* Media queries: adaptação a diferentes tamanhos de ecrã.
+* Variáveis CSS: definição e reutilização das cores.
+* Transições CSS: efeitos nos botões, cartões, imagens e mudança de tema.
 
 ## Modos diurno e noturno
 
-O modo diurno usa fundos claros e texto escuro. O modo noturno usa fundos escuros e texto claro. O botão do cabeçalho adiciona ou remove a classe `dark-mode` no `body`. As cores são definidas pelas variáveis CSS.
+Uma das funcionalidades desenvolvidas foi a possibilidade de alternar entre dois modos de visualização.
+O modo claro utiliza fundos claros e textos escuros, enquanto o modo escuro apresenta fundos escuros e textos claros.
 
-## Principais variáveis
+Esta funcionalidade foi criada apenas com HTML e CSS.
+Foi utilizado um input do tipo checkbox, associado a um label.
 
-`--bg` (fundo), `--text` (texto), `--accent` (destaque), `--card` (cartões), `--button-bg` e `--button-text` (botões), `--border` (contornos).
+No CSS, a pseudoclasse :checked identifica quando o checkbox está selecionado e permite alterar as variáveis responsáveis pelas cores.
 
-## Três exemplos de transições
+Também foram aplicadas transições para tornar a mudança de tema mais suave.
 
-1. Botões: `background-color .25s ease-in`, `transform .25s ease-out` e `box-shadow .3s ease`.
-2. Cartões: `transform .3s ease-out` e `box-shadow .3s ease-in-out`.
-3. Mudança de modo: `background-color .4s ease` e `color .4s ease`.
 
 ## Imagens e recursos
 

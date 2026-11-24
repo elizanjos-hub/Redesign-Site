@@ -1,9 +1,1139 @@
-/* Variáveis globais: cores e valores partilhados */
-:root{--bg:#f7f8f3;--text:#192821;--muted:#58645c;--accent:#007b45;--accent-light:#a4cb43;--card:#fff;--border:#d9e1d7;--button-bg:#007b45;--button-text:#fff;--surface:#edf2e7;--radius:12px}
-/* Modo noturno: substitui as variáveis, sem duplicar os estilos */
-body.dark-mode{--bg:#131e19;--text:#eff6ee;--muted:#b6c5b8;--accent:#a4dc71;--accent-light:#7fae42;--card:#203027;--border:#405448;--button-bg:#a4dc71;--button-text:#102118;--surface:#1a2a21}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.55;transition:background-color .4s ease,color .4s ease}img{max-width:100%;display:block}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}button{cursor:pointer}a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,.gallery-scroll:focus-visible{outline:3px solid var(--accent-light);outline-offset:4px}.container{width:min(1180px,calc(100% - 48px));margin:auto}.skip-link{position:absolute;top:-80px;left:10px;background:var(--card);padding:12px;z-index:20}.skip-link:focus{top:10px}.site-header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--border);transition:background-color .4s ease,border-color .4s ease}.header-inner{min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:9px;line-height:1}.brand img{width:46px;height:46px;object-fit:contain;background:white;border-radius:7px}.brand strong{font-size:22px;letter-spacing:-1px}.brand small{display:block;font-size:9px;font-weight:700;letter-spacing:2px;margin-top:5px}.site-header nav{display:flex;gap:25px;flex-wrap:wrap}.site-header nav a,.footer-top nav a{font-size:13px;font-weight:bold;transition:color .2s ease}.site-header nav a:hover,.footer-top nav a:hover{color:var(--accent)}.theme-button{border:1px solid var(--border);border-radius:40px;background:var(--card);color:var(--text);padding:10px 15px;font-size:12px;font-weight:bold;white-space:nowrap;transition:background-color .4s ease,color .4s ease,transform .2s ease}.theme-button:hover{transform:translateY(-2px)}.hero{padding-top:44px}.hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:45px;align-items:center;padding-bottom:52px}.eyebrow{font-size:11px;letter-spacing:2px;font-weight:800;text-transform:uppercase}.dot{display:inline-block;background:var(--accent-light);width:9px;height:9px;border-radius:50%;margin-right:8px}.line{display:inline-block;width:25px;border-top:1px solid var(--muted);vertical-align:middle;margin:0 8px}.hero h1,.section h2{font-family:Georgia,'Times New Roman',serif;letter-spacing:-.065em;line-height:1.05;font-weight:normal}.hero h1{font-size:clamp(64px,7.5vw,112px);margin:35px 0 25px;max-width:700px}.hero h1 em,.section h2 em{color:var(--accent);font-weight:normal}.period{color:var(--accent-light)}.hero-description{font-size:19px;max-width:450px;color:var(--muted)}.hero-actions{display:flex;align-items:center;gap:25px;flex-wrap:wrap;margin-top:35px}.button{display:inline-flex;align-items:center;justify-content:center;gap:30px;border-radius:4px;padding:16px 22px;font-weight:700;font-size:13px;border:1px solid transparent;transition:background-color .25s ease-in,transform .25s ease-out,box-shadow .3s ease}.button-primary{background:var(--button-bg);color:var(--button-text)}.button:hover{transform:translateY(-4px);box-shadow:0 10px 22px #0002}.text-link{font-size:13px;font-weight:700;border-bottom:1px solid var(--accent);padding-bottom:5px;transition:color .2s ease,letter-spacing .3s ease}.text-link:hover{color:var(--accent);letter-spacing:.4px}.hero-caption{font-size:10px;letter-spacing:2px;margin-top:85px;color:var(--muted)}.hero-visual{position:relative;height:550px;min-width:0}.hero-visual>img{width:100%;height:100%;object-fit:cover;border-radius:190px 190px 5px 5px}.image-stamp b{font-size:24px}.image-credit{position:absolute;bottom:12px;left:25px;color:#fff;font-size:10px;letter-spacing:2px;text-shadow:0 1px 6px #000}.marquee{background:var(--accent);color:var(--button-text);padding:20px 0;overflow:hidden}.marquee .container{display:flex;justify-content:space-between;gap:18px;font-size:13px;font-weight:900;letter-spacing:2px;white-space:nowrap}.marquee span{color:var(--accent-light)}.section{padding:105px 0}.section-heading{margin-bottom:45px}.section h2{font-size:clamp(44px,5.5vw,76px);margin:15px 0 0;max-width:760px}.heading-split{display:flex;align-items:end;justify-content:space-between;gap:35px}.heading-split>p{max-width:270px;color:var(--muted);font-size:14px}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}.about-image{position:relative}.about-image img{width:100%;height:470px;object-fit:cover;border-radius:4px}.photo-tag{position:absolute;bottom:18px;left:18px;background:var(--card);padding:10px 13px;font-size:10px;font-weight:800;letter-spacing:1px}.about-text .asterisk{font-size:75px;color:var(--accent-light)}.about-text h3{font-family:Georgia,serif;font-size:clamp(30px,3vw,42px);line-height:1.15;letter-spacing:-1px;font-weight:normal;margin:10px 0 20px}.about-text p{color:var(--muted);font-size:15px}.about-text .text-link{display:inline-block;margin-top:15px}.courses-section{background:var(--surface);transition:background-color .4s ease}.courses-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.course-card,.news-card{background:var(--card);border:1px solid var(--border);transition:transform .3s ease-out,box-shadow .3s ease-in-out,background-color .4s ease,border-color .4s ease}.course-card:hover,.news-card:hover{transform:translateY(-7px);box-shadow:0 16px 28px #0002}.course-image{height:230px;position:relative;overflow:hidden}.course-image img{width:100%;height:100%;object-fit:cover}.course-image span{position:absolute;top:12px;left:12px;background:#f7f8f3;color:#152b20;font-size:9px;font-weight:800;letter-spacing:1px;padding:7px 10px}.course-body{padding:22px;display:flex;flex-direction:column;min-height:285px}.course-area,.news-meta{font-size:10px;letter-spacing:1.4px;font-weight:800;color:var(--accent)}.course-body h3{font-family:Georgia,serif;font-weight:normal;font-size:27px;letter-spacing:-1px;margin:6px 0}.course-body>p:not(.course-area){font-size:13px;color:var(--muted);margin:5px 0}.course-body .duration{margin-top:auto!important;padding-top:15px}.course-body a{border-top:1px solid var(--border);margin-top:15px;padding-top:12px;display:flex;justify-content:space-between;font-size:12px;font-weight:bold;color:var(--accent)}.content-note{font-size:12px;color:var(--muted);margin-top:22px}.course-details{margin-top:42px;border-top:1px solid var(--border);padding-top:20px}.course-details h3{font-family:Georgia,serif;font-size:28px;font-weight:normal}.details-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.details-grid>div{scroll-margin-top:100px}.details-grid h4{font-size:14px;margin-bottom:4px}.details-grid p{font-size:12px;color:var(--muted);margin:0}.news-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.news-card img{width:100%;height:250px;object-fit:cover}.news-card>div{padding:23px}.news-meta{display:flex;justify-content:space-between;gap:10px}.news-meta span{color:var(--muted);font-size:9px}.news-card h3{font-family:Georgia,serif;font-size:27px;line-height:1.2;font-weight:normal;letter-spacing:-.5px}.news-card p:last-child{font-size:13px;color:var(--muted)}.gallery-section{background:var(--surface);transition:background-color .4s ease}.gallery-section .section-heading>p:last-child{color:var(--muted)}.gallery-scroll{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:20px}.gallery-scroll figure{flex:0 0 34%;margin:0;scroll-snap-align:start}.gallery-scroll img{height:310px;width:100%;object-fit:cover}.gallery-scroll figcaption{font-size:10px;letter-spacing:2px;font-weight:800;margin-top:12px}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px}.contact-copy>p:not(.eyebrow){max-width:390px;color:var(--muted)}.contact-copy .text-link{display:inline-block;margin-top:15px}.contact-form{background:var(--card);border:1px solid var(--border);padding:34px;transition:background-color .4s ease,border-color .4s ease}.contact-form h3{font-family:Georgia,serif;font-size:30px;font-weight:normal;margin:0}.contact-form>p{font-size:12px;color:var(--muted)}.contact-form label{display:block;font-size:12px;font-weight:bold;margin:18px 0 6px}.contact-form input,.contact-form textarea{width:100%;border:1px solid var(--border);background:var(--bg);color:var(--text);padding:12px;border-radius:3px;transition:background-color .4s ease,color .4s ease,border-color .4s ease}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:15px}.contact-form .button{margin-top:20px}.site-footer{background:var(--surface);border-top:1px solid var(--border);transition:background-color .4s ease,border-color .4s ease}.footer-top{display:flex;justify-content:space-between;gap:25px;align-items:center;padding:45px 0}.footer-top img{width:170px;height:auto;background:white;padding:10px}.footer-top p{font-family:Georgia,serif;font-size:23px}.footer-top nav{display:flex;flex-wrap:wrap;gap:20px}.footer-bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--border);padding:20px 0;font-size:9px;font-weight:bold;letter-spacing:1px;color:var(--muted)}
-/* Ajustes para tablet e telemóvel */
-@media(max-width:950px){.header-inner{flex-wrap:wrap;padding:12px 0}.site-header nav{order:3;width:100%;justify-content:center;padding:10px 0}.hero-grid{gap:25px}.hero-visual{height:440px}.courses-grid,.details-grid{grid-template-columns:repeat(2,1fr)}.about-grid,.contact-grid{gap:35px}.gallery-scroll figure{flex-basis:48%}}
-@media(max-width:650px){.container{width:min(100% - 32px,1180px)}.header-inner{gap:12px}.site-header nav{gap:14px}.site-header nav a{font-size:11px}.theme-button{font-size:11px;padding:9px}.hero{padding-top:25px}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero h1{font-size:clamp(56px,13vw,82px);margin-top:22px}.hero-caption{margin-top:40px}.hero-visual{height:390px}.hero-visual>img{border-radius:140px 140px 4px 4px}.marquee .container{font-size:10px;gap:10px}.section{padding:70px 0}.section h2{font-size:clamp(42px,10vw,62px)}.heading-split{display:block}.courses-grid,.news-grid,.details-grid,.form-row{grid-template-columns:1fr}.course-image{height:270px}.course-body{min-height:0}.news-card img{height:260px}.about-image img{height:340px}.gallery-scroll figure{flex-basis:83%}.gallery-scroll img{height:280px}.contact-form{padding:22px}.footer-top{align-items:flex-start;flex-direction:column}.footer-top nav{gap:12px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+/* =========================================
+   1. VARIÁVEIS E CORES
+   As variáveis permitem alterar as cores
+   do site sem repetir os mesmos valores.
+========================================= */
+
+:root {
+  --bg: #f7f8f3;
+  --surface: #ffffff;
+  --surface-alt: #edf2e8;
+
+  --text: #192821;
+  --muted: #58665c;
+
+  --green: #087c48;
+  --green-dark: #075c37;
+  --lime: #c5e66b;
+
+  --border: #dce4d9;
+
+  --button-text: #ffffff;
+
+  --radius: 16px;
+}
+
+
+/* =========================================
+   2. RESET
+   Remove espaçamentos automáticos
+   dos navegadores.
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.15;
+}
+
+h1,
+h2 {
+  letter-spacing: -0.04em;
+}
+
+
+/* =========================================
+   3. MODO CLARO E ESCURO
+   O checkbox altera as variáveis de cores
+   através da pseudoclasse :checked.
+   Não é necessário JavaScript.
+========================================= */
+
+.theme-toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.site {
+  min-height: 100vh;
+
+  background-color: var(--bg);
+  color: var(--text);
+
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+}
+
+/* Cores utilizadas quando o modo escuro está ativo */
+
+#theme-toggle:checked ~ .site {
+  --bg: #121d17;
+  --surface: #1d2c23;
+  --surface-alt: #26382c;
+
+  --text: #f0f6ed;
+  --muted: #b5c4b7;
+
+  --green: #b5e47c;
+  --green-dark: #d2f4a8;
+  --lime: #8bbd54;
+
+  --border: #405448;
+
+  --button-text: #142219;
+}
+
+/* Esconde o texto do modo que não está ativo */
+
+.theme-dark {
+  display: none;
+}
+
+#theme-toggle:checked ~ .site .theme-light {
+  display: none;
+}
+
+#theme-toggle:checked ~ .site .theme-dark {
+  display: inline;
+}
+
+
+/* =========================================
+   4. ELEMENTOS GERAIS
+   Classes reutilizadas em várias secções.
+========================================= */
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 100px 0;
+  scroll-margin-top: 90px;
+}
+
+.section-label {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 20px;
+}
+
+.section-heading {
+  margin-bottom: 50px;
+}
+
+.section-heading h2 {
+  font-size: clamp(36px, 5vw, 66px);
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.section-heading > p:last-child {
+  max-width: 600px;
+  color: var(--muted);
+}
+
+.highlight {
+  color: var(--green);
+}
+
+/* Botões reutilizáveis */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  padding: 15px 25px;
+
+  border-radius: 50px;
+  border: 1px solid transparent;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+}
+
+.btn-primary {
+  background-color: var(--green);
+  color: var(--button-text);
+}
+
+.btn-primary:hover {
+  background-color: var(--green-dark);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.btn-secondary:hover {
+  background-color: var(--surface-alt);
+  border-color: var(--green);
+}
+
+
+/* =========================================
+   5. CABEÇALHO
+   Flexbox organiza logótipo, menu e botão.
+========================================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+
+  transition:
+    background-color 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  min-height: 85px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 65px;
+  height: auto;
+  object-fit: contain;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.main-nav a {
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: var(--green);
+}
+
+/* Botão que ativa o checkbox */
+
+.theme-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 16px;
+
+  border: 1px solid var(--border);
+  border-radius: 50px;
+
+  background-color: var(--surface-alt);
+  color: var(--text);
+
+  font-size: 12px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.theme-button:hover {
+  transform: translateY(-3px);
+  background-color: var(--surface);
+}
+
+.theme-toggle:focus-visible ~ .site .theme-button {
+  outline: 3px solid var(--green);
+  outline-offset: 4px;
+}
+
+
+/* =========================================
+   6. HERO
+   Primeira área do site.
+   Grid divide texto e fotografia.
+========================================= */
+
+.hero {
+  padding: 80px 0 100px;
+  scroll-margin-top: 90px;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.hero-text h1 {
+  font-size: clamp(48px, 6vw, 88px);
+  line-height: 1.05;
+  margin-bottom: 30px;
+}
+
+.hero-description {
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 470px;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.hero-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.hero-image:hover img {
+  transform: scale(1.04);
+}
+
+
+/* =========================================
+   7. SOBRE NÓS
+   Grid organiza fotografia e conteúdo.
+========================================= */
+
+.about-section {
+  background-color: var(--surface);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.about-image {
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.about-image img {
+  width: 100%;
+  height: 470px;
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.04);
+}
+
+.about-text h3 {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.about-text > p {
+  margin-bottom: 20px;
+  color: var(--muted);
+}
+
+.about-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.about-info h4 {
+  color: var(--green);
+  margin-bottom: 10px;
+}
+
+.about-info p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+
+/* =========================================
+   8. FORMAÇÕES
+   CSS Grid organiza os quatro cartões.
+========================================= */
+
+.courses-section {
+  background-color: var(--surface-alt);
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.course-card {
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px 25px;
+  min-height: 370px;
+
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.4s ease,
+    border-color 0.4s ease;
+}
+
+/* Efeito hover: o cartão sobe ligeiramente */
+
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  border-color: var(--green);
+}
+
+.course-number {
+  font-size: 42px;
+  font-weight: bold;
+  color: var(--green);
+  margin-bottom: 25px;
+}
+
+.course-area {
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+  color: var(--green);
+  margin-bottom: 12px;
+}
+
+.course-card h3 {
+  font-size: 23px;
+  margin-bottom: 18px;
+}
+
+.course-card > p:not(.course-area) {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.course-duration {
+  font-size: 12px !important;
+}
+
+.course-link {
+  display: inline-block;
+  margin-top: auto;
+
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--green);
+
+  transition: transform 0.3s ease;
+}
+
+.course-link:hover {
+  transform: translateX(5px);
+}
+
+/* Informação complementar das formações */
+
+.course-details {
+  margin-top: 45px;
+  padding: 35px;
+
+  background-color: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.course-details h3 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.course-details p {
+  color: var(--muted);
+  max-width: 750px;
+  margin-bottom: 25px;
+}
+
+
+/* =========================================
+   9. GALERIA
+   Fotografias lado a lado com scroll.
+   Não utiliza JavaScript.
+========================================= */
+
+.gallery-section {
+  background-color: var(--bg);
+}
+
+.gallery-scroll {
+  display: flex;
+  gap: 20px;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  padding: 10px 5% 25px;
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--green) var(--surface-alt);
+}
+
+.gallery-scroll figure {
+  flex: 0 0 350px;
+  scroll-snap-align: start;
+}
+
+.gallery-scroll img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+
+  border-radius: var(--radius);
+
+  transition: transform 0.4s ease;
+}
+
+.gallery-scroll img:hover {
+  transform: scale(1.03);
+}
+
+.gallery-scroll figcaption {
+  margin-top: 12px;
+
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.gallery-note {
+  margin-top: 15px;
+  font-size: 13px;
+  color: var(--green);
+}
+
+
+/* =========================================
+   10. NOTÍCIAS
+   Três cartões organizados com Grid.
+========================================= */
+
+.news-section {
+  background-color: var(--surface);
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.news-card {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 310px;
+  padding: 35px 30px;
+
+  background-color: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.4s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.07);
+}
+
+.news-date {
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: var(--green);
+  margin-bottom: 25px;
+}
+
+.news-card h3 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.news-card > p:not(.news-date) {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 25px;
+}
+
+.news-category {
+  margin-top: auto;
+
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: var(--green);
+}
+
+.example-note {
+  margin-top: 25px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+
+/* =========================================
+   11. CONTACTOS
+   Grid divide informações e formulário.
+========================================= */
+
+.contact-section {
+  background-color: var(--surface-alt);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.contact-info h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.contact-info > p {
+  color: var(--muted);
+  margin-bottom: 30px;
+}
+
+.contact-item {
+  margin-bottom: 25px;
+}
+
+.contact-item h4 {
+  color: var(--green);
+  margin-bottom: 8px;
+}
+
+.contact-item p {
+  color: var(--muted);
+}
+
+.contact-item a {
+  color: var(--green);
+  font-weight: bold;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.contact-warning {
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+/* Formulário HTML */
+
+.contact-form {
+  padding: 40px;
+
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  display: block;
+
+  width: 100%;
+  padding: 14px 16px;
+
+  background-color: var(--bg);
+  color: var(--text);
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  outline: none;
+
+  transition:
+    border-color 0.3s ease,
+    background-color 0.4s ease;
+}
+
+/* Destaque visual quando o utilizador seleciona um campo */
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--green);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--muted);
+  opacity: 0.8;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-note {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 15px;
+}
+
+
+/* =========================================
+   12. RODAPÉ
+   Flexbox organiza os elementos.
+========================================= */
+
+.site-footer {
+  background-color: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-brand img {
+  width: 90px;
+  margin-bottom: 15px;
+}
+
+.footer-brand h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-nav a {
+  font-size: 13px;
+  font-weight: bold;
+
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: var(--green);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  border-top: 1px solid var(--border);
+}
+
+.footer-bottom p {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+
+/* =========================================
+   13. TRANSIÇÕES ENTRE TEMAS
+   Suaviza a mudança de cores.
+========================================= */
+
+.about-section,
+.courses-section,
+.gallery-section,
+.news-section,
+.contact-section,
+.site-footer,
+.course-details,
+.contact-form,
+.course-card,
+.news-card {
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease,
+    border-color 0.4s ease;
+}
+
+/* Mantém os efeitos de movimento dos cartões */
+
+.course-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.news-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.4s ease,
+    border-color 0.4s ease;
+}
+
+
+/* =========================================
+   14. RESPONSIVIDADE
+   Media queries adaptam o layout
+   a diferentes tamanhos de ecrã.
+========================================= */
+
+
+/* TABLETS */
+
+@media (max-width: 1000px) {
+
+  .header-content {
+    flex-wrap: wrap;
+    padding: 15px 0;
+  }
+
+  .main-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-content {
+    gap: 35px;
+  }
+
+  .hero-text h1 {
+    font-size: 58px;
+  }
+
+  .hero-image img {
+    height: 420px;
+  }
+
+  .about-grid {
+    gap: 35px;
+  }
+
+  /* Quatro cursos passam para duas colunas */
+
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    gap: 35px;
+  }
+
+}
+
+
+/* TELEMÓVEIS */
+
+@media (max-width: 700px) {
+
+  .container {
+    width: 90%;
+  }
+
+  .section {
+    padding: 65px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 35px;
+  }
+
+  .section-heading h2 {
+    font-size: 38px;
+  }
+
+  /* Cabeçalho em formato vertical */
+
+  .header-content {
+    flex-direction: column;
+    gap: 18px;
+    padding: 20px 0;
+  }
+
+  .main-nav {
+    order: 0;
+    gap: 15px;
+  }
+
+  .main-nav a {
+    font-size: 12px;
+  }
+
+  .theme-button {
+    padding: 8px 14px;
+  }
+
+  /* Hero passa de duas colunas para uma */
+
+  .hero {
+    padding: 50px 0 65px;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .hero-text h1 {
+    font-size: 52px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .hero-image img {
+    height: 350px;
+  }
+
+  /* Sobre nós passa para uma coluna */
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image img {
+    height: 330px;
+  }
+
+  .about-text h3 {
+    font-size: 27px;
+  }
+
+  .about-info {
+    grid-template-columns: 1fr;
+  }
+
+  /* Cursos passam para uma coluna */
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .course-card {
+    min-height: auto;
+  }
+
+  .course-details {
+    padding: 25px;
+  }
+
+  /* Galeria com fotografias menores */
+
+  .gallery-scroll figure {
+    flex-basis: 280px;
+  }
+
+  .gallery-scroll img {
+    height: 240px;
+  }
+
+  /* Notícias passam para uma coluna */
+
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .news-card {
+    min-height: auto;
+  }
+
+  /* Contactos passam para uma coluna */
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding: 25px;
+  }
+
+  /* Rodapé adaptado ao telemóvel */
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+}
+
+
+/* TELEMÓVEIS PEQUENOS */
+
+@media (max-width: 400px) {
+
+  .hero-text h1 {
+    font-size: 43px;
+  }
+
+  .section-heading h2 {
+    font-size: 32px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .gallery-scroll figure {
+    flex-basis: 240px;
+  }
+
+  .gallery-scroll img {
+    height: 210px;
+  }
+
+}
