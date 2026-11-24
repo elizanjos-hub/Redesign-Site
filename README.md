@@ -5,13 +5,11 @@
 
 ## Sobre o projeto
 
-Este projeto foi desenvolvido no âmbito da formação de Desenvolvimento Web, com o objetivo de criar uma proposta de reformulação do website do IEFP Rio Meão.
+Este trabalho consiste numa proposta de reformulação do website do IEFP Rio Meão.
 
-A ideia foi desenvolver uma página mais moderna, organizada e intuitiva, facilitando o acesso às informações sobre o centro, as formações e as atividades realizadas.
+O objetivo foi criar uma página mais moderna, organizada e fácil de navegar, utilizando os conhecimentos adquiridos nas aulas de HTML e CSS.
 
-Procurei criar uma identidade visual simples, com destaque para as cores institucionais, fotografias e uma organização que tornasse a navegação mais agradável.
-
-Este é um projeto académico e não representa o website oficial do IEFP.
+O website apresenta informações sobre o centro, áreas de formação, notícias, fotografias e contactos.
 
 ## Objetivos
 
@@ -27,27 +25,20 @@ Os principais objetivos foram:
 * Criar um formulário de contacto demonstrativo.
 
 ## Tecnologias utilizadas
-
-O website foi desenvolvido apenas com:
-* HTML5: estrutura e organização dos conteúdos.
-* CSS3: estilos, cores, tipografia e disposição dos elementos.
-* CSS Grid: organização das secções e dos cartões.
-* Flexbox: alinhamento de elementos e criação da galeria horizontal.
-* Media queries: adaptação a diferentes tamanhos de ecrã.
-* Variáveis CSS: definição e reutilização das cores.
-* Transições CSS: efeitos nos botões, cartões, imagens e mudança de tema.
+* HTML5 para organizar os conteúdos.
+* CSS3 para definir o visual da página.
+* Flexbox e CSS Grid para organizar os elementos.
+* Media queries para adaptar o site a diferentes ecrãs.
+* Git e GitHub para guardar e publicar o projeto.
 
 ## Modos diurno e noturno
 
-Uma das funcionalidades desenvolvidas foi a possibilidade de alternar entre dois modos de visualização.
-O modo claro utiliza fundos claros e textos escuros, enquanto o modo escuro apresenta fundos escuros e textos claros.
+O website permite alternar entre dois modos:
 
-Esta funcionalidade foi criada apenas com HTML e CSS.
-Foi utilizado um input do tipo checkbox, associado a um label.
+* Diurno: fundo claro e texto escuro.
+* Noturno: fundo escuro e texto claro.
 
-No CSS, a pseudoclasse :checked identifica quando o checkbox está selecionado e permite alterar as variáveis responsáveis pelas cores.
-
-Também foram aplicadas transições para tornar a mudança de tema mais suave.
+A mudança é feita através de um checkbox no HTML e de variáveis CSS, sem utilizar JavaScript.
 
 
 ## Imagens e recursos
@@ -60,6 +51,6 @@ As formações são **exemplos académicos** e não representam um catálogo ofi
 
 ## Dificuldades e soluções
 
-- Adaptar um estilo editorial a ecrãs pequenos: grelhas com CSS Grid e media queries.
-- Manter contraste nos dois modos: variáveis CSS com valores alternativos em `.dark-mode`.
-- Evitar inventar informação institucional: identificação explícita de conteúdos ilustrativos.
+- Uma das principais dificuldades foi adaptar os elementos para diferentes tamanhos de ecrã, mantendo a organização da página.
+- Outra dificuldade foi implementar o modo diurno e noturno apenas com HTML e CSS.
+- Para resolver estas questões, utilizei media queries, Flexbox, CSS Grid e variáveis CSS.

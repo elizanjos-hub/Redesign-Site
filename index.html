@@ -1,625 +1,782 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-PT">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>IEFP Rio Meão | Formação para o futuro</title>
+    <title>IEFP Rio Meão | Aprender transforma</title>
 
-  <!-- Ligação ao ficheiro CSS -->
-  <link rel="stylesheet" href="css/estilo.css">
+    <!-- Ligação ao ficheiro CSS -->
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 
 <body>
 
-  <!-- Checkbox que permite alternar entre modo claro e escuro sem JavaScript -->
-  <input type="checkbox" id="theme-toggle" class="theme-toggle">
+    <!-- Checkbox utilizado para mudar o tema sem JavaScript -->
+    <input type="checkbox" id="theme-toggle" class="theme-toggle">
 
-  <div class="site">
+    <!-- Esta div contém toda a página e permite mudar as cores pelo CSS -->
+    <div class="site">
 
-    <!-- CABEÇALHO -->
-    <header class="site-header">
 
-      <div class="container header-content">
+        <!-- CABEÇALHO -->
+        <header class="site-header">
 
-        <!-- Identidade do centro -->
-        <a href="#inicio" class="logo">
-          <img src="imagens/logo-iefp.png" alt="Logótipo do IEFP">
-          <span>Rio Meão</span>
-        </a>
+            <div class="container header-content">
 
-        <!-- Menu de navegação -->
-        <nav class="main-nav" aria-label="Navegação principal">
-          <a href="#inicio">Início</a>
-          <a href="#sobre">Sobre nós</a>
-          <a href="#formacoes">Formações</a>
-          <a href="#noticias">Notícias</a>
-          <a href="#contactos">Contactos</a>
-        </nav>
-
-        <!-- Controlo do tema -->
-        <label for="theme-toggle" class="theme-button">
-          <span class="theme-light">☾ Modo noturno</span>
-          <span class="theme-dark">☀ Modo diurno</span>
-        </label>
-
-      </div>
-
-    </header>
-
-    <main>
-
-      <!-- APRESENTAÇÃO INICIAL -->
-      <section class="hero" id="inicio">
-
-        <div class="container hero-content">
-
-          <div class="hero-text">
-
-            <p class="section-label">IEFP RIO MEÃO</p>
-
-            <h1>
-              O teu futuro<br>
-              começa aqui<span class="highlight">.</span>
-            </h1>
-
-            <p class="hero-description">
-              Novas competências, novas oportunidades.
-              Descobre formações que te ajudam a construir
-              o próximo capítulo da tua vida profissional.
-            </p>
-
-            <div class="hero-buttons">
-              <a href="#formacoes" class="btn btn-primary">
-                Explorar formações ↗
-              </a>
-
-              <a href="#sobre" class="btn btn-secondary">
-                Conhecer o centro
-              </a>
-            </div>
-
-          </div>
-
-          <!-- Fotografia real do centro -->
-          <div class="hero-image">
-            <img
-              src="imagens/entrada-iefp.jpg"
-              alt="Entrada do Instituto do Emprego e Formação Profissional"
-            >
-          </div>
-
-        </div>
-
-      </section>
-
-      <!-- SOBRE NÓS -->
-      <section class="section about-section" id="sobre">
-
-        <div class="container">
-
-          <div class="section-heading">
-            <p class="section-label">01 / SOBRE NÓS</p>
-            <h2>Mais do que formação.<br>Novas possibilidades.</h2>
-          </div>
-
-          <!-- Layout organizado com CSS Grid -->
-          <div class="about-grid">
-
-            <div class="about-image">
-              <img
-                src="imagens/centro-iefp.jpg"
-                alt="Instalações do centro de formação de Rio Meão"
-              >
-            </div>
-
-            <div class="about-text">
-
-              <h3>Aprender para transformar.</h3>
-
-              <p>
-                O IEFP promove a qualificação profissional,
-                o desenvolvimento de competências e a
-                aproximação entre formação e mercado de trabalho.
-              </p>
-
-              <p>
-                Em Rio Meão, a formação representa uma
-                oportunidade de crescimento pessoal e
-                profissional, através de diferentes áreas
-                de aprendizagem.
-              </p>
-
-              <div class="about-info">
-
-                <div>
-                  <h4>Missão</h4>
-                  <p>
-                    Promover a formação, a empregabilidade
-                    e a valorização das competências.
-                  </p>
-                </div>
-
-                <div>
-                  <h4>Objetivo</h4>
-                  <p>
-                    Preparar pessoas para novos desafios
-                    e oportunidades profissionais.
-                  </p>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <!-- OFERTA FORMATIVA -->
-      <section class="section courses-section" id="formacoes">
-
-        <div class="container">
-
-          <div class="section-heading">
-            <p class="section-label">02 / OFERTA FORMATIVA</p>
-
-            <h2>Encontra o teu<br>próximo caminho.</h2>
-
-            <p>
-              Explora diferentes áreas de formação
-              e descobre novas possibilidades.
-            </p>
-          </div>
-
-          <!-- Cartões organizados com CSS Grid -->
-          <div class="courses-grid">
-
-            <!-- CURSO 1 -->
-            <article class="course-card">
-
-              <span class="course-number">01</span>
-
-              <p class="course-area">DIGITAL E TECNOLOGIA</p>
-
-              <h3>Design e Multimédia</h3>
-
-              <p>
-                Desenvolvimento de competências em
-                comunicação visual, ferramentas digitais
-                e criação de conteúdos.
-              </p>
-
-              <p class="course-duration">
-                Duração: variável conforme a ação
-              </p>
-
-              <a href="#detalhes-formacoes" class="course-link">
-                Saber mais ↗
-              </a>
-
-            </article>
-
-            <!-- CURSO 2 -->
-            <article class="course-card">
-
-              <span class="course-number">02</span>
-
-              <p class="course-area">BELEZA E BEM-ESTAR</p>
-
-              <h3>Cabeleireiro e Estética</h3>
-
-              <p>
-                Aprendizagem de técnicas e práticas
-                relacionadas com cuidados pessoais,
-                imagem e atendimento.
-              </p>
-
-              <p class="course-duration">
-                Duração: variável conforme a ação
-              </p>
-
-              <a href="#detalhes-formacoes" class="course-link">
-                Saber mais ↗
-              </a>
-
-            </article>
-
-            <!-- CURSO 3 -->
-            <article class="course-card">
-
-              <span class="course-number">03</span>
-
-              <p class="course-area">HOTELARIA E RESTAURAÇÃO</p>
-
-              <h3>Cozinha e Pastelaria</h3>
-
-              <p>
-                Desenvolvimento de competências
-                técnicas na preparação de alimentos,
-                organização e práticas de cozinha.
-              </p>
-
-              <p class="course-duration">
-                Duração: variável conforme a ação
-              </p>
-
-              <a href="#detalhes-formacoes" class="course-link">
-                Saber mais ↗
-              </a>
-
-            </article>
-
-            <!-- CURSO 4 -->
-            <article class="course-card">
-
-              <span class="course-number">04</span>
-
-              <p class="course-area">GESTÃO E ADMINISTRAÇÃO</p>
-
-              <h3>Competências Administrativas</h3>
-
-              <p>
-                Formação orientada para organização,
-                comunicação, ferramentas de escritório
-                e apoio à gestão.
-              </p>
-
-              <p class="course-duration">
-                Duração: variável conforme a ação
-              </p>
-
-              <a href="#detalhes-formacoes" class="course-link">
-                Saber mais ↗
-              </a>
-
-            </article>
-
-          </div>
-
-          <!-- Informação complementar dos cursos -->
-          <div class="course-details" id="detalhes-formacoes">
-
-            <h3>Queres saber mais sobre as formações?</h3>
-
-            <p>
-              As áreas apresentadas são exemplos de oferta
-              formativa para esta proposta académica.
-              A disponibilidade, a duração e as condições
-              de acesso devem ser confirmadas nos canais
-              oficiais do IEFP.
-            </p>
-
-            <a
-              href="https://www.iefp.pt"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-primary"
-            >
-              Consultar o IEFP ↗
-            </a>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <!-- GALERIA DE FOTOGRAFIAS -->
-      <section class="section gallery-section" id="galeria">
-
-        <div class="container">
-
-          <div class="section-heading">
-            <p class="section-label">03 / VIDA NO CENTRO</p>
-
-            <h2>A formação<br>acontece aqui.</h2>
-
-            <p>
-              Conhece alguns momentos, atividades
-              e experiências ligados à formação profissional.
-            </p>
-          </div>
-
-        </div>
-
-        <!-- Galeria horizontal com scroll criado apenas com CSS -->
-        <div
-          class="gallery-scroll"
-          tabindex="0"
-          aria-label="Galeria de fotografias do IEFP"
-        >
-
-          <figure>
-            <img
-              src="imagens/equipa-cozinha.jpg"
-              alt="Formandos da área de cozinha"
-            >
-            <figcaption>Aprender na prática</figcaption>
-          </figure>
-
-          <figure>
-            <img
-              src="imagens/evento-digital.jpg"
-              alt="Participantes num evento de tecnologia e comunicação"
-            >
-            <figcaption>Experiências digitais</figcaption>
-          </figure>
-
-          <figure>
-            <img
-              src="imagens/formacao-beleza.jpg"
-              alt="Atividade prática na área de beleza"
-            >
-            <figcaption>Criatividade e técnica</figcaption>
-          </figure>
-
-          <figure>
-            <img
-              src="imagens/atividade-saude.jpg"
-              alt="Atividade de aprendizagem na área da saúde"
-            >
-            <figcaption>Conhecimento em ação</figcaption>
-          </figure>
-
-          <figure>
-            <img
-              src="imagens/evento-iefp.jpg"
-              alt="Participantes numa atividade promovida pelo IEFP"
-            >
-            <figcaption>Novas oportunidades</figcaption>
-          </figure>
-
-        </div>
-
-        <div class="container">
-          <p class="gallery-note">
-            Desliza para explorar mais fotografias →
-          </p>
-        </div>
-
-      </section>
-
-      <!-- NOTÍCIAS E EVENTOS -->
-      <section class="section news-section" id="noticias">
-
-        <div class="container">
-
-          <div class="section-heading">
-            <p class="section-label">04 / ACONTECE NO IEFP</p>
-
-            <h2>Ideias, pessoas<br>e oportunidades.</h2>
-          </div>
-
-          <!-- Destaques organizados em cartões -->
-          <div class="news-grid">
-
-            <article class="news-card">
-
-              <p class="news-date">24 NOV 2026</p>
-
-              <h3>Aprender através da prática</h3>
-
-              <p>
-                A formação prática permite desenvolver
-                competências e aproximar os formandos
-                dos desafios do mercado de trabalho.
-              </p>
-
-              <span class="news-category">FORMAÇÃO</span>
-
-            </article>
-
-            <article class="news-card">
-
-              <p class="news-date">18 NOV 2026</p>
-
-              <h3>Competências para o futuro digital</h3>
-
-              <p>
-                As ferramentas digitais e a criatividade
-                representam oportunidades de aprendizagem
-                em diferentes áreas profissionais.
-              </p>
-
-              <span class="news-category">TECNOLOGIA</span>
-
-            </article>
-
-            <article class="news-card">
-
-              <p class="news-date">10 NOV 2026</p>
-
-              <h3>Novos caminhos profissionais</h3>
-
-              <p>
-                A qualificação profissional contribui
-                para a valorização das pessoas e para
-                a construção de novas oportunidades.
-              </p>
-
-              <span class="news-category">EMPREGABILIDADE</span>
-
-            </article>
-
-          </div>
-
-          <p class="example-note">
-            Conteúdos e datas ilustrativos, criados para este projeto académico.
-          </p>
-
-        </div>
-
-      </section>
-
-      <!-- CONTACTOS -->
-      <section class="section contact-section" id="contactos">
-
-        <div class="container">
-
-          <div class="section-heading">
-            <p class="section-label">05 / CONTACTOS</p>
-
-            <h2>O próximo passo<br>começa com uma conversa.</h2>
-          </div>
-
-          <div class="contact-grid">
-
-            <!-- Informação de contacto -->
-            <div class="contact-info">
-
-              <h3>Vamos falar?</h3>
-
-              <p>
-                Tens dúvidas sobre formação profissional?
-                Consulta os canais oficiais do IEFP
-                ou utiliza o formulário demonstrativo.
-              </p>
-
-              <div class="contact-item">
-                <h4>Localização</h4>
-                <p>Rio Meão, Santa Maria da Feira, Portugal</p>
-              </div>
-
-              <div class="contact-item">
-                <h4>Website oficial</h4>
-
-                <a
-                  href="https://www.iefp.pt"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Consultar o portal IEFP ↗
+                <!-- Identificação do centro -->
+                <a href="#inicio" class="logo">
+                    <span>IEFP</span>
+                    <span>Rio Meão</span>
                 </a>
-              </div>
 
-              <p class="contact-warning">
-                Este website é uma proposta académica
-                e não representa um canal oficial de contacto.
-              </p>
+                <!-- Menu com ligações para as secções -->
+                <nav class="main-nav">
+                    <a href="#inicio">Início</a>
+                    <a href="#sobre">O centro</a>
+                    <a href="#formacoes">Formações</a>
+                    <a href="#noticias">Notícias</a>
+                    <a href="#contactos">Contactos</a>
+                </nav>
+
+                <!-- O label permite selecionar o checkbox -->
+                <label for="theme-toggle" class="theme-button">
+                    <span class="theme-light">☾ Modo noturno</span>
+                    <span class="theme-dark">☀ Modo diurno</span>
+                </label>
 
             </div>
 
-            <!-- Formulário com validação básica HTML -->
-            <form
-              class="contact-form"
-              action="#contactos"
-              method="get"
-          
-            >
+        </header>
 
-              <div class="form-group">
-                <label for="nome">Nome</label>
 
-                <input
-                  type="text"
-                  id="nome"
-                  name="nome"
-                  placeholder="O teu nome"
-                  required
-                >
-              </div>
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main>
 
-              <div class="form-group">
-                <label for="email">Email</label>
 
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="O teu email"
-                  required
-                >
-              </div>
+            <!-- 1. APRESENTAÇÃO INICIAL -->
+            <section class="hero" id="inicio">
 
-              <div class="form-group">
-                <label for="assunto">Assunto</label>
+                <div class="container hero-content">
 
-                <input
-                  type="text"
-                  id="assunto"
-                  name="assunto"
-                  placeholder="Sobre o que queres falar?"
-                  required
-                >
-              </div>
+                    <div class="hero-text">
 
-              <div class="form-group">
-                <label for="mensagem">Mensagem</label>
+                        <p class="section-label">
+                            IEFP RIO MEÃO / FORMAÇÃO PROFISSIONAL
+                        </p>
 
-                <textarea
-                  id="mensagem"
-                  name="mensagem"
-                  rows="5"
-                  placeholder="Escreve a tua mensagem"
-                  required
-                ></textarea>
-              </div>
+                        <h1>
+                            O futuro<br>
+                            começa aqui<span class="highlight">.</span>
+                        </h1>
 
-              <!-- Botão demonstrativo, sem envio de dados -->
-              <button type="button" class="btn btn-primary">
-                Enviar mensagem ↗
-              </button>
+                        <p class="hero-description">
+                            Um lugar para descobrir capacidades,
+                            desenvolver competências e criar
+                            novas oportunidades.
+                        </p>
 
-              <p class="form-note">
-                Formulário demonstrativo. Nenhuma mensagem será enviada.
-              </p>
+                        <!-- Botões que encaminham para outras secções -->
+                        <div class="hero-buttons">
 
-            </form>
+                            <a href="#formacoes" class="btn btn-primary">
+                                Explorar formações ↗
+                            </a>
 
-          </div>
+                            <a href="#sobre" class="btn btn-secondary">
+                                Conhecer o centro
+                            </a>
 
-        </div>
+                        </div>
 
-      </section>
+                    </div>
 
-    </main>
+                    <!-- Imagem de destaque -->
+                    <div class="hero-image">
 
-    <!-- RODAPÉ -->
-    <footer class="site-footer">
+                        <img
+                            src="images/entrada.jpg"
+                            alt="Entrada do centro de formação do IEFP"
+                        >
 
-      <div class="container footer-content">
+                    </div>
 
-        <div class="footer-brand">
+                </div>
 
-          <img
-            src="imagens/logo-iefp.png"
-            alt="Logótipo do IEFP"
-          >
+            </section>
 
-          <h2>IEFP Rio Meão</h2>
 
-          <p>Formação para novas oportunidades.</p>
+            <!-- 2. SOBRE O CENTRO -->
+            <section class="section about-section" id="sobre">
 
-        </div>
+                <div class="container">
 
-        <!-- Links para as principais secções -->
-        <nav class="footer-nav" aria-label="Navegação do rodapé">
+                    <div class="section-heading">
 
-          <a href="#inicio">Início</a>
-          <a href="#sobre">Sobre nós</a>
-          <a href="#formacoes">Formações</a>
-          <a href="#noticias">Notícias</a>
-          <a href="#contactos">Contactos</a>
+                        <p class="section-label">01 / O CENTRO</p>
 
-        </nav>
+                        <h2>
+                            Muito mais do que formação.
+                        </h2>
 
-      </div>
+                    </div>
 
-      <div class="container footer-bottom">
+                    <!-- O CSS Grid organiza a imagem e o texto -->
+                    <div class="about-grid">
 
-        <p>Projeto académico | Website não oficial</p>
+                        <div class="about-image">
 
-        <p>Desenvolvido por Eliza Anjos | 2026</p>
+                            <img
+                                src="images/fachada.jpg"
+                                alt="Fachada das instalações do IEFP"
+                            >
 
-      </div>
+                        </div>
 
-    </footer>
+                        <div class="about-text">
 
-  </div>
+                            <h3>
+                                Aprender na prática.
+                                Crescer com propósito.
+                            </h3>
+
+                            <p>
+                                O IEFP promove a qualificação profissional,
+                                o desenvolvimento de competências e a
+                                integração no mercado de trabalho.
+                            </p>
+
+                            <p>
+                                O centro de Rio Meão representa um espaço
+                                de aprendizagem, partilha e crescimento,
+                                aproximando as pessoas de novas
+                                oportunidades profissionais.
+                            </p>
+
+                            <!-- Missão e objetivos -->
+                            <div class="about-info">
+
+                                <div>
+
+                                    <h4>Missão</h4>
+
+                                    <p>
+                                        Promover a formação profissional
+                                        e melhorar as oportunidades
+                                        de empregabilidade.
+                                    </p>
+
+                                </div>
+
+                                <div>
+
+                                    <h4>Objetivo</h4>
+
+                                    <p>
+                                        Desenvolver competências e preparar
+                                        os formandos para novos desafios.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- 3. OFERTA FORMATIVA -->
+            <section class="section courses-section" id="formacoes">
+
+                <div class="container">
+
+                    <div class="section-heading">
+
+                        <p class="section-label">
+                            02 / OFERTA FORMATIVA
+                        </p>
+
+                        <h2>
+                            Escolhe o teu próximo passo.
+                        </h2>
+
+                        <p>
+                            Descobre diferentes áreas de formação
+                            e encontra novas possibilidades.
+                        </p>
+
+                    </div>
+
+                    <!-- Quatro cartões organizados com CSS Grid -->
+                    <div class="courses-grid">
+
+
+                        <!-- CURSO 1 -->
+                        <article class="course-card">
+
+                            <span class="course-number">01</span>
+
+                            <p class="course-area">
+                                BELEZA E BEM-ESTAR
+                            </p>
+
+                            <h3>Cabeleireiro</h3>
+
+                            <p>
+                                Aprende técnicas de cabeleireiro,
+                                desenvolve a criatividade e explora
+                                novas competências profissionais.
+                            </p>
+
+                            <p class="course-duration">
+                                Duração: variável conforme a ação
+                            </p>
+
+                            <a href="#detalhes-formacoes" class="course-link">
+                                Saber mais ↗
+                            </a>
+
+                        </article>
+
+
+                        <!-- CURSO 2 -->
+                        <article class="course-card">
+
+                            <span class="course-number">02</span>
+
+                            <p class="course-area">
+                                HOTELARIA E RESTAURAÇÃO
+                            </p>
+
+                            <h3>Cozinha</h3>
+
+                            <p>
+                                Desenvolve competências na preparação
+                                de alimentos, organização da cozinha
+                                e trabalho em equipa.
+                            </p>
+
+                            <p class="course-duration">
+                                Duração: variável conforme a ação
+                            </p>
+
+                            <a href="#detalhes-formacoes" class="course-link">
+                                Saber mais ↗
+                            </a>
+
+                        </article>
+
+
+                        <!-- CURSO 3 -->
+                        <article class="course-card">
+
+                            <span class="course-number">03</span>
+
+                            <p class="course-area">
+                                ESTÉTICA E IMAGEM
+                            </p>
+
+                            <h3>Estética</h3>
+
+                            <p>
+                                Explora técnicas de cuidados pessoais,
+                                imagem, bem-estar e atendimento
+                                ao público.
+                            </p>
+
+                            <p class="course-duration">
+                                Duração: variável conforme a ação
+                            </p>
+
+                            <a href="#detalhes-formacoes" class="course-link">
+                                Saber mais ↗
+                            </a>
+
+                        </article>
+
+
+                        <!-- CURSO 4 -->
+                        <article class="course-card">
+
+                            <span class="course-number">04</span>
+
+                            <p class="course-area">
+                                SAÚDE E APOIO
+                            </p>
+
+                            <h3>Apoio à saúde</h3>
+
+                            <p>
+                                Desenvolve competências relacionadas
+                                com o acompanhamento, a prevenção
+                                e os cuidados de saúde.
+                            </p>
+
+                            <p class="course-duration">
+                                Duração: variável conforme a ação
+                            </p>
+
+                            <a href="#detalhes-formacoes" class="course-link">
+                                Saber mais ↗
+                            </a>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Destino dos botões "Saber mais" -->
+                    <div class="course-details" id="detalhes-formacoes">
+
+                        <h3>
+                            Queres saber mais sobre as formações?
+                        </h3>
+
+                        <p>
+                            As áreas apresentadas são exemplos
+                            utilizados neste projeto académico.
+                            A disponibilidade, a duração e as
+                            condições de acesso devem ser
+                            confirmadas junto do IEFP.
+                        </p>
+
+                        <a
+                            href="https://www.iefp.pt/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-primary"
+                        >
+                            Consultar o IEFP ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- 4. GALERIA DE FOTOGRAFIAS -->
+            <section class="section gallery-section" id="galeria">
+
+                <div class="container">
+
+                    <div class="section-heading">
+
+                        <p class="section-label">
+                            03 / VIDA NO CENTRO
+                        </p>
+
+                        <h2>
+                            A formação acontece aqui.
+                        </h2>
+
+                        <p>
+                            Conhece alguns momentos de aprendizagem,
+                            criatividade e partilha.
+                        </p>
+
+                    </div>
+
+                    <!-- Flexbox organiza as fotografias lado a lado -->
+                    <div class="gallery-scroll">
+
+                        <figure>
+
+                            <img
+                                src="images/cozinha-equipa.jpg"
+                                alt="Formandos da área de cozinha"
+                            >
+
+                            <figcaption>
+                                Aprender na prática
+                            </figcaption>
+
+                        </figure>
+
+
+                        <figure>
+
+                            <img
+                                src="images/formacao-cabeleireiro.jpg"
+                                alt="Trabalhos realizados na área de cabeleireiro"
+                            >
+
+                            <figcaption>
+                                Criatividade e técnica
+                            </figcaption>
+
+                        </figure>
+
+
+                        <figure>
+
+                            <img
+                                src="images/evento-digital.jpg"
+                                alt="Atividade relacionada com competências digitais"
+                            >
+
+                            <figcaption>
+                                Experiências digitais
+                            </figcaption>
+
+                        </figure>
+
+
+                        <figure>
+
+                            <img
+                                src="images/evento-criativo.jpg"
+                                alt="Atividade criativa realizada no centro"
+                            >
+
+                            <figcaption>
+                                Criar também é aprender
+                            </figcaption>
+
+                        </figure>
+
+
+                        <figure>
+
+                            <img
+                                src="images/evento-comunidade.jpg"
+                                alt="Participantes numa atividade do IEFP"
+                            >
+
+                            <figcaption>
+                                Partilhar experiências
+                            </figcaption>
+
+                        </figure>
+
+                    </div>
+
+                    <p class="gallery-note">
+                        Desliza para explorar as fotografias →
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- 5. NOTÍCIAS E EVENTOS -->
+            <section class="section news-section" id="noticias">
+
+                <div class="container">
+
+                    <div class="section-heading">
+
+                        <p class="section-label">
+                            04 / ACONTECE NO IEFP
+                        </p>
+
+                        <h2>
+                            Ideias, pessoas e oportunidades.
+                        </h2>
+
+                    </div>
+
+                    <!-- Três notícias organizadas em cartões -->
+                    <div class="news-grid">
+
+
+                        <!-- NOTÍCIA 1 -->
+                        <article class="news-card">
+
+                            <p class="news-date">
+                                10 NOV 2026
+                            </p>
+
+                            <h3>
+                                Aprender através da prática
+                            </h3>
+
+                            <p>
+                                A formação prática permite desenvolver
+                                competências e aproximar os formandos
+                                dos desafios do mercado de trabalho.
+                            </p>
+
+                            <span class="news-category">
+                                FORMAÇÃO
+                            </span>
+
+                        </article>
+
+
+                        <!-- NOTÍCIA 2 -->
+                        <article class="news-card">
+
+                            <p class="news-date">
+                                15 NOV 2026
+                            </p>
+
+                            <h3>
+                                Competências para o futuro digital
+                            </h3>
+
+                            <p>
+                                As ferramentas digitais e a criatividade
+                                representam novas oportunidades de
+                                aprendizagem em diferentes profissões.
+                            </p>
+
+                            <span class="news-category">
+                                TECNOLOGIA
+                            </span>
+
+                        </article>
+
+
+                        <!-- NOTÍCIA 3 -->
+                        <article class="news-card">
+
+                            <p class="news-date">
+                                20 NOV 2026
+                            </p>
+
+                            <h3>
+                                Novos caminhos profissionais
+                            </h3>
+
+                            <p>
+                                A qualificação profissional contribui
+                                para a valorização das pessoas e para
+                                a construção de novas oportunidades.
+                            </p>
+
+                            <span class="news-category">
+                                EMPREGABILIDADE
+                            </span>
+
+                        </article>
+
+                    </div>
+
+                    <!-- As notícias são exemplos para o trabalho -->
+                    <p class="example-note">
+                        Notícias e datas ilustrativas,
+                        criadas para este projeto académico.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- 6. CONTACTOS -->
+            <section class="section contact-section" id="contactos">
+
+                <div class="container">
+
+                    <div class="section-heading">
+
+                        <p class="section-label">
+                            05 / CONTACTOS
+                        </p>
+
+                        <h2>
+                            O próximo passo começa com uma conversa.
+                        </h2>
+
+                    </div>
+
+                    <!-- Grid divide contactos e formulário -->
+                    <div class="contact-grid">
+
+
+                        <!-- INFORMAÇÕES -->
+                        <div class="contact-info">
+
+                            <h3>Vamos falar?</h3>
+
+                            <p>
+                                Tens dúvidas sobre formação profissional?
+                                Consulta os canais oficiais do IEFP
+                                para obter mais informações.
+                            </p>
+
+                            <div class="contact-item">
+
+                                <h4>Localização</h4>
+
+                                <p>
+                                    Rio Meão, Santa Maria da Feira,
+                                    Portugal
+                                </p>
+
+                            </div>
+
+                            <div class="contact-item">
+
+                                <h4>Website oficial</h4>
+
+                                <a
+                                    href="https://www.iefp.pt/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    www.iefp.pt ↗
+                                </a>
+
+                            </div>
+
+                            <p class="contact-warning">
+                                Este website é uma proposta académica
+                                e não representa um canal oficial
+                                de contacto.
+                            </p>
+
+                        </div>
+
+
+                        <!-- FORMULÁRIO -->
+                        <!-- Os campos required são de preenchimento obrigatório -->
+                        <!-- O type="email" verifica o formato do email -->
+                        <form class="contact-form" action="#contactos" method="get">
+
+                            <div class="form-group">
+
+                                <label for="nome">
+                                    Nome *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nome"
+                                    name="nome"
+                                    placeholder="O teu nome"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Email *
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="O teu email"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="assunto">
+                                    Assunto *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="assunto"
+                                    name="assunto"
+                                    placeholder="Sobre o que queres falar?"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="mensagem">
+                                    Mensagem *
+                                </label>
+
+                                <textarea
+                                    id="mensagem"
+                                    name="mensagem"
+                                    rows="5"
+                                    placeholder="Escreve a tua mensagem"
+                                    required
+                                ></textarea>
+
+                            </div>
+
+
+                            <!-- Botão que permite testar a validação HTML -->
+                            <button type="submit" class="btn btn-primary">
+                                Testar formulário ↗
+                            </button>
+
+                            <p class="form-note">
+                                Formulário demonstrativo.
+                                Não envia mensagens para o IEFP.
+                            </p>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- RODAPÉ -->
+        <footer class="site-footer">
+
+            <div class="container footer-content">
+
+                <!-- Identificação do projeto -->
+                <div class="footer-brand">
+
+                    <h2>IEFP Rio Meão</h2>
+
+                    <p>
+                        Aprender transforma.
+                    </p>
+
+                </div>
+
+                <!-- Links para voltar às secções -->
+                <nav class="footer-nav">
+
+                    <a href="#inicio">Início</a>
+                    <a href="#sobre">O centro</a>
+                    <a href="#formacoes">Formações</a>
+                    <a href="#noticias">Notícias</a>
+                    <a href="#contactos">Contactos</a>
+
+                </nav>
+
+            </div>
+
+
+            <div class="container footer-bottom">
+
+                <p>
+                    Projeto académico, website não oficial.
+                </p>
+
+                <p>
+                    Desenvolvido por Eliza Anjos | 2026
+                </p>
+
+            </div>
+
+        </footer>
+
+    </div>
 
 </body>
 </html>

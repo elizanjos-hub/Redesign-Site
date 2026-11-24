@@ -1,878 +1,732 @@
-/* =========================================
-   1. VARIÁVEIS E CORES
-   As variáveis permitem alterar as cores
-   do site sem repetir os mesmos valores.
-========================================= */
+/* =====================================
+   1. CORES DO SITE
+   As variáveis facilitam a mudança de cores.
+===================================== */
 
 :root {
-  --bg: #f7f8f3;
-  --surface: #ffffff;
-  --surface-alt: #edf2e8;
+    --fundo: #f7f8f3;
+    --fundo-card: #ffffff;
+    --fundo-secundario: #edf2e8;
 
-  --text: #192821;
-  --muted: #58665c;
+    --texto: #192821;
+    --texto-secundario: #58665c;
 
-  --green: #087c48;
-  --green-dark: #075c37;
-  --lime: #c5e66b;
+    --verde: #087c48;
+    --verde-escuro: #075c37;
 
-  --border: #dce4d9;
-
-  --button-text: #ffffff;
-
-  --radius: 16px;
+    --borda: #dce4d9;
+    --texto-botao: #ffffff;
 }
 
 
-/* =========================================
-   2. RESET
-   Remove espaçamentos automáticos
-   dos navegadores.
-========================================= */
+/* =====================================
+   2. ESTILOS GERAIS
+===================================== */
+
+/* Remove as margens automáticas */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
 }
 
 img {
-  display: block;
-  max-width: 100%;
+    max-width: 100%;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
-button,
-input,
-textarea {
-  font: inherit;
+h1, h2, h3, h4 {
+    line-height: 1.2;
 }
 
-button {
-  cursor: pointer;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  line-height: 1.15;
-}
-
-h1,
-h2 {
-  letter-spacing: -0.04em;
-}
-
-
-/* =========================================
-   3. MODO CLARO E ESCURO
-   O checkbox altera as variáveis de cores
-   através da pseudoclasse :checked.
-   Não é necessário JavaScript.
-========================================= */
-
-.theme-toggle {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-}
-
-.site {
-  min-height: 100vh;
-
-  background-color: var(--bg);
-  color: var(--text);
-
-  transition:
-    background-color 0.4s ease,
-    color 0.4s ease;
-}
-
-/* Cores utilizadas quando o modo escuro está ativo */
-
-#theme-toggle:checked ~ .site {
-  --bg: #121d17;
-  --surface: #1d2c23;
-  --surface-alt: #26382c;
-
-  --text: #f0f6ed;
-  --muted: #b5c4b7;
-
-  --green: #b5e47c;
-  --green-dark: #d2f4a8;
-  --lime: #8bbd54;
-
-  --border: #405448;
-
-  --button-text: #142219;
-}
-
-/* Esconde o texto do modo que não está ativo */
-
-.theme-dark {
-  display: none;
-}
-
-#theme-toggle:checked ~ .site .theme-light {
-  display: none;
-}
-
-#theme-toggle:checked ~ .site .theme-dark {
-  display: inline;
-}
-
-
-/* =========================================
-   4. ELEMENTOS GERAIS
-   Classes reutilizadas em várias secções.
-========================================= */
+/* Define a largura máxima do conteúdo */
 
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .section {
-  padding: 100px 0;
-  scroll-margin-top: 90px;
+    padding: 80px 0;
 }
 
 .section-label {
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--green);
-  margin-bottom: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--verde);
+    margin-bottom: 20px;
 }
 
 .section-heading {
-  margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .section-heading h2 {
-  font-size: clamp(36px, 5vw, 66px);
-  max-width: 800px;
-  margin-bottom: 20px;
+    font-size: 48px;
+    margin-bottom: 15px;
 }
 
-.section-heading > p:last-child {
-  max-width: 600px;
-  color: var(--muted);
+.section-heading p {
+    color: var(--texto-secundario);
+}
+
+.section-heading .section-label {
+    color: var(--verde);
 }
 
 .highlight {
-  color: var(--green);
+    color: var(--verde);
 }
 
-/* Botões reutilizáveis */
+
+/* =====================================
+   3. MODO CLARO E ESCURO
+   O checkbox muda as variáveis CSS.
+===================================== */
+
+/* Esconde o checkbox, mas mantém o funcionamento */
+
+.theme-toggle {
+    position: absolute;
+    opacity: 0;
+}
+
+/* Toda a página fica dentro da classe site */
+
+.site {
+    background-color: var(--fundo);
+    color: var(--texto);
+    min-height: 100vh;
+
+    transition: background-color 0.4s ease,
+                color 0.4s ease;
+}
+
+/* Quando o checkbox está selecionado,
+   as variáveis recebem as cores escuras */
+
+#theme-toggle:checked ~ .site {
+    --fundo: #142019;
+    --fundo-card: #203027;
+    --fundo-secundario: #293b2f;
+
+    --texto: #f0f6ed;
+    --texto-secundario: #b5c4b7;
+
+    --verde: #b5e47c;
+    --verde-escuro: #d2f4a8;
+
+    --borda: #405448;
+    --texto-botao: #142019;
+}
+
+/* Alterna o texto do botão */
+
+.theme-dark {
+    display: none;
+}
+
+#theme-toggle:checked ~ .site .theme-light {
+    display: none;
+}
+
+#theme-toggle:checked ~ .site .theme-dark {
+    display: inline;
+}
+
+
+/* =====================================
+   4. BOTÕES
+   Utilizamos transições no hover.
+===================================== */
 
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
+    display: inline-block;
+    padding: 14px 24px;
 
-  padding: 15px 25px;
+    border-radius: 30px;
+    border: 1px solid var(--borda);
 
-  border-radius: 50px;
-  border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
 
-  font-size: 14px;
-  font-weight: bold;
+    cursor: pointer;
 
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease;
+    /* Transição de duas propriedades */
+    transition: background-color 0.3s ease,
+                transform 0.3s ease-in-out;
 }
 
 .btn:hover {
-  transform: translateY(-4px);
+    transform: translateY(-3px);
 }
 
 .btn-primary {
-  background-color: var(--green);
-  color: var(--button-text);
+    background-color: var(--verde);
+    color: var(--texto-botao);
+    border-color: var(--verde);
 }
 
 .btn-primary:hover {
-  background-color: var(--green-dark);
+    background-color: var(--verde-escuro);
 }
 
 .btn-secondary {
-  background-color: transparent;
-  color: var(--text);
-  border-color: var(--border);
+    background-color: transparent;
+    color: var(--texto);
 }
 
 .btn-secondary:hover {
-  background-color: var(--surface-alt);
-  border-color: var(--green);
+    background-color: var(--fundo-secundario);
 }
 
 
-/* =========================================
+/* =====================================
    5. CABEÇALHO
-   Flexbox organiza logótipo, menu e botão.
-========================================= */
+   Flexbox organiza os elementos.
+===================================== */
 
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
+    background-color: var(--fundo-card);
+    border-bottom: 1px solid var(--borda);
+    padding: 20px 0;
 
-  background-color: var(--surface);
-  border-bottom: 1px solid var(--border);
-
-  transition:
-    background-color 0.4s ease,
-    border-color 0.4s ease;
+    transition: background-color 0.4s ease;
 }
 
 .header-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-
-  min-height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+    display: flex;
+    flex-direction: column;
 
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.logo img {
-  width: 65px;
-  height: auto;
-  object-fit: contain;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--verde);
+    line-height: 1.2;
 }
 
 .main-nav {
-  display: flex;
-  align-items: center;
-  gap: 28px;
+    display: flex;
+    gap: 25px;
 }
 
 .main-nav a {
-  font-size: 13px;
-  font-weight: 600;
+    font-size: 14px;
+    font-weight: bold;
 
-  transition: color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .main-nav a:hover {
-  color: var(--green);
+    color: var(--verde);
 }
 
-/* Botão que ativa o checkbox */
+/* Botão para mudar entre os dois modos */
 
 .theme-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+    display: inline-block;
+    padding: 10px 15px;
 
-  padding: 10px 16px;
+    background-color: var(--fundo-secundario);
+    border: 1px solid var(--borda);
+    border-radius: 25px;
 
-  border: 1px solid var(--border);
-  border-radius: 50px;
+    font-size: 12px;
+    font-weight: bold;
 
-  background-color: var(--surface-alt);
-  color: var(--text);
+    cursor: pointer;
 
-  font-size: 12px;
-  font-weight: bold;
-
-  cursor: pointer;
-
-  transition:
-    background-color 0.3s ease,
-    transform 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .theme-button:hover {
-  transform: translateY(-3px);
-  background-color: var(--surface);
-}
-
-.theme-toggle:focus-visible ~ .site .theme-button {
-  outline: 3px solid var(--green);
-  outline-offset: 4px;
+    background-color: var(--fundo);
 }
 
 
-/* =========================================
-   6. HERO
-   Primeira área do site.
-   Grid divide texto e fotografia.
-========================================= */
+/* =====================================
+   6. APRESENTAÇÃO INICIAL
+   Grid divide o texto e a imagem.
+===================================== */
 
 .hero {
-  padding: 80px 0 100px;
-  scroll-margin-top: 90px;
+    padding: 80px 0;
 }
 
 .hero-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
 }
 
 .hero-text h1 {
-  font-size: clamp(48px, 6vw, 88px);
-  line-height: 1.05;
-  margin-bottom: 30px;
+    font-size: 65px;
+    margin-bottom: 25px;
 }
 
 .hero-description {
-  font-size: 17px;
-  color: var(--muted);
-  max-width: 470px;
-  margin-bottom: 35px;
+    font-size: 17px;
+    color: var(--texto-secundario);
+    margin-bottom: 30px;
 }
 
 .hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.hero-image {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--radius);
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .hero-image img {
-  width: 100%;
-  height: 520px;
-  object-fit: cover;
-
-  transition: transform 0.6s ease;
-}
-
-.hero-image:hover img {
-  transform: scale(1.04);
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
 
-/* =========================================
-   7. SOBRE NÓS
-   Grid organiza fotografia e conteúdo.
-========================================= */
+/* =====================================
+   7. SOBRE O CENTRO
+===================================== */
 
 .about-section {
-  background-color: var(--surface);
+    background-color: var(--fundo-card);
 }
 
 .about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 70px;
-  align-items: center;
-}
-
-.about-image {
-  overflow: hidden;
-  border-radius: var(--radius);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
 }
 
 .about-image img {
-  width: 100%;
-  height: 470px;
-  object-fit: cover;
-
-  transition: transform 0.5s ease;
-}
-
-.about-image:hover img {
-  transform: scale(1.04);
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
 .about-text h3 {
-  font-size: 32px;
-  margin-bottom: 25px;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 
 .about-text > p {
-  margin-bottom: 20px;
-  color: var(--muted);
+    color: var(--texto-secundario);
+    margin-bottom: 20px;
 }
 
 .about-info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
-  margin-top: 35px;
+    display: flex;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.about-info div {
+    flex: 1;
 }
 
 .about-info h4 {
-  color: var(--green);
-  margin-bottom: 10px;
+    color: var(--verde);
+    margin-bottom: 10px;
 }
 
 .about-info p {
-  font-size: 14px;
-  color: var(--muted);
+    font-size: 14px;
+    color: var(--texto-secundario);
 }
 
 
-/* =========================================
+/* =====================================
    8. FORMAÇÕES
-   CSS Grid organiza os quatro cartões.
-========================================= */
+   Grid organiza os quatro cartões.
+===================================== */
 
 .courses-section {
-  background-color: var(--surface-alt);
+    background-color: var(--fundo-secundario);
 }
 
 .courses-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
 .course-card {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-  padding: 30px 25px;
-  min-height: 370px;
+    background-color: var(--fundo-card);
+    border: 1px solid var(--borda);
+    border-radius: 15px;
 
-  background-color: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+    padding: 25px;
+    min-height: 350px;
 
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    background-color 0.4s ease,
-    border-color 0.4s ease;
+    /* Transição do cartão */
+    transition: transform 0.3s ease-out,
+                border-color 0.3s ease;
 }
 
-/* Efeito hover: o cartão sobe ligeiramente */
-
 .course-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
-  border-color: var(--green);
+    transform: translateY(-5px);
+    border-color: var(--verde);
 }
 
 .course-number {
-  font-size: 42px;
-  font-weight: bold;
-  color: var(--green);
-  margin-bottom: 25px;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--verde);
+    margin-bottom: 20px;
 }
 
 .course-area {
-  font-size: 10px;
-  font-weight: bold;
-  letter-spacing: 0.12em;
-  color: var(--green);
-  margin-bottom: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    color: var(--verde);
+    margin-bottom: 10px;
 }
 
 .course-card h3 {
-  font-size: 23px;
-  margin-bottom: 18px;
+    font-size: 23px;
+    margin-bottom: 15px;
 }
 
-.course-card > p:not(.course-area) {
-  font-size: 14px;
-  color: var(--muted);
-  margin-bottom: 20px;
+.course-card p {
+    font-size: 14px;
+    color: var(--texto-secundario);
+    margin-bottom: 15px;
+}
+
+.course-card .course-area {
+    color: var(--verde);
 }
 
 .course-duration {
-  font-size: 12px !important;
+    font-size: 12px;
 }
 
 .course-link {
-  display: inline-block;
-  margin-top: auto;
-
-  font-size: 13px;
-  font-weight: bold;
-  color: var(--green);
-
-  transition: transform 0.3s ease;
+    color: var(--verde);
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: auto;
 }
 
 .course-link:hover {
-  transform: translateX(5px);
+    text-decoration: underline;
 }
 
-/* Informação complementar das formações */
+/* Informação adicional dos cursos */
 
 .course-details {
-  margin-top: 45px;
-  padding: 35px;
+    background-color: var(--fundo-card);
+    border: 1px solid var(--borda);
+    border-radius: 15px;
 
-  background-color: var(--surface);
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
+    padding: 30px;
+    margin-top: 35px;
 }
 
 .course-details h3 {
-  font-size: 25px;
-  margin-bottom: 15px;
+    font-size: 24px;
+    margin-bottom: 15px;
 }
 
 .course-details p {
-  color: var(--muted);
-  max-width: 750px;
-  margin-bottom: 25px;
+    color: var(--texto-secundario);
+    margin-bottom: 20px;
 }
 
 
-/* =========================================
-   9. GALERIA
-   Fotografias lado a lado com scroll.
-   Não utiliza JavaScript.
-========================================= */
+/* =====================================
+   9. GALERIA DE FOTOGRAFIAS
+   Flexbox e scroll horizontal.
+===================================== */
 
 .gallery-section {
-  background-color: var(--bg);
+    background-color: var(--fundo);
 }
 
 .gallery-scroll {
-  display: flex;
-  gap: 20px;
-
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-
-  padding: 10px 5% 25px;
-
-  scrollbar-width: thin;
-  scrollbar-color: var(--green) var(--surface-alt);
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
 }
 
 .gallery-scroll figure {
-  flex: 0 0 350px;
-  scroll-snap-align: start;
+    min-width: 300px;
 }
 
 .gallery-scroll img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-
-  border-radius: var(--radius);
-
-  transition: transform 0.4s ease;
-}
-
-.gallery-scroll img:hover {
-  transform: scale(1.03);
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
 .gallery-scroll figcaption {
-  margin-top: 12px;
-
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 0.08em;
-  color: var(--muted);
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--texto-secundario);
+    margin-top: 10px;
 }
 
 .gallery-note {
-  margin-top: 15px;
-  font-size: 13px;
-  color: var(--green);
+    font-size: 13px;
+    color: var(--verde);
+    margin-top: 15px;
 }
 
 
-/* =========================================
+/* =====================================
    10. NOTÍCIAS
-   Três cartões organizados com Grid.
-========================================= */
+   Grid organiza os três destaques.
+===================================== */
 
 .news-section {
-  background-color: var(--surface);
+    background-color: var(--fundo-card);
 }
 
 .news-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
 .news-card {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-  min-height: 310px;
-  padding: 35px 30px;
+    background-color: var(--fundo-secundario);
+    border: 1px solid var(--borda);
+    border-radius: 15px;
 
-  background-color: var(--surface-alt);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+    padding: 30px;
+    min-height: 300px;
 
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    background-color 0.4s ease;
+    transition: transform 0.3s ease-out,
+                border-color 0.3s ease;
 }
 
 .news-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.07);
+    transform: translateY(-5px);
+    border-color: var(--verde);
 }
 
 .news-date {
-  font-size: 11px;
-  font-weight: bold;
-  letter-spacing: 0.1em;
-  color: var(--green);
-  margin-bottom: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--verde);
+    margin-bottom: 20px;
 }
 
 .news-card h3 {
-  font-size: 25px;
-  margin-bottom: 20px;
+    font-size: 24px;
+    margin-bottom: 15px;
 }
 
 .news-card > p:not(.news-date) {
-  font-size: 14px;
-  color: var(--muted);
-  margin-bottom: 25px;
+    color: var(--texto-secundario);
+    font-size: 14px;
+    margin-bottom: 20px;
 }
 
 .news-category {
-  margin-top: auto;
-
-  font-size: 11px;
-  font-weight: bold;
-  letter-spacing: 0.1em;
-  color: var(--green);
+    font-size: 11px;
+    font-weight: bold;
+    color: var(--verde);
+    margin-top: auto;
 }
 
 .example-note {
-  margin-top: 25px;
-  font-size: 12px;
-  color: var(--muted);
+    font-size: 12px;
+    color: var(--texto-secundario);
+    margin-top: 25px;
 }
 
 
-/* =========================================
-   11. CONTACTOS
-   Grid divide informações e formulário.
-========================================= */
+/* =====================================
+   11. CONTACTOS E FORMULÁRIO
+===================================== */
 
 .contact-section {
-  background-color: var(--surface-alt);
+    background-color: var(--fundo-secundario);
 }
 
 .contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 70px;
-  align-items: start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
 }
 
 .contact-info h3 {
-  font-size: 30px;
-  margin-bottom: 20px;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 
 .contact-info > p {
-  color: var(--muted);
-  margin-bottom: 30px;
+    color: var(--texto-secundario);
+    margin-bottom: 25px;
 }
 
 .contact-item {
-  margin-bottom: 25px;
+    margin-bottom: 25px;
 }
 
 .contact-item h4 {
-  color: var(--green);
-  margin-bottom: 8px;
+    color: var(--verde);
+    margin-bottom: 8px;
 }
 
 .contact-item p {
-  color: var(--muted);
+    color: var(--texto-secundario);
 }
 
 .contact-item a {
-  color: var(--green);
-  font-weight: bold;
-}
-
-.contact-item a:hover {
-  text-decoration: underline;
+    color: var(--verde);
+    font-weight: bold;
 }
 
 .contact-warning {
-  font-size: 12px;
-  margin-top: 30px;
+    font-size: 12px;
 }
 
-/* Formulário HTML */
+/* Estilos do formulário */
 
 .contact-form {
-  padding: 40px;
-
-  background-color: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+    background-color: var(--fundo-card);
+    border: 1px solid var(--borda);
+    border-radius: 15px;
+    padding: 30px;
 }
 
 .form-group {
-  margin-bottom: 22px;
+    margin-bottom: 20px;
 }
 
 .form-group label {
-  display: block;
-
-  font-size: 13px;
-  font-weight: bold;
-
-  margin-bottom: 8px;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
 .form-group input,
 .form-group textarea {
-  display: block;
+    width: 100%;
+    padding: 12px;
 
-  width: 100%;
-  padding: 14px 16px;
+    background-color: var(--fundo);
+    color: var(--texto);
 
-  background-color: var(--bg);
-  color: var(--text);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
 
-  border: 1px solid var(--border);
-  border-radius: 8px;
-
-  outline: none;
-
-  transition:
-    border-color 0.3s ease,
-    background-color 0.4s ease;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Destaque visual quando o utilizador seleciona um campo */
+/* Destaque quando o campo é selecionado */
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: var(--green);
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: var(--muted);
-  opacity: 0.8;
-}
-
-.form-group textarea {
-  resize: vertical;
+    outline: 2px solid var(--verde);
 }
 
 .form-note {
-  font-size: 12px;
-  color: var(--muted);
-  margin-top: 15px;
+    font-size: 12px;
+    color: var(--texto-secundario);
+    margin-top: 15px;
 }
 
 
-/* =========================================
+/* =====================================
    12. RODAPÉ
-   Flexbox organiza os elementos.
-========================================= */
+===================================== */
 
 .site-footer {
-  background-color: var(--surface);
-  border-top: 1px solid var(--border);
+    background-color: var(--fundo-card);
+    border-top: 1px solid var(--borda);
 }
 
 .footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
 
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-.footer-brand img {
-  width: 90px;
-  margin-bottom: 15px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .footer-brand h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .footer-brand p {
-  font-size: 14px;
-  color: var(--muted);
+    color: var(--texto-secundario);
 }
 
 .footer-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .footer-nav a {
-  font-size: 13px;
-  font-weight: bold;
-
-  transition: color 0.3s ease;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .footer-nav a:hover {
-  color: var(--green);
+    color: var(--verde);
 }
 
 .footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 
-  padding-top: 25px;
-  padding-bottom: 25px;
-
-  border-top: 1px solid var(--border);
+    border-top: 1px solid var(--borda);
+    padding: 20px 0;
 }
 
 .footer-bottom p {
-  font-size: 12px;
-  color: var(--muted);
+    font-size: 12px;
+    color: var(--texto-secundario);
 }
 
 
-/* =========================================
-   13. TRANSIÇÕES ENTRE TEMAS
-   Suaviza a mudança de cores.
-========================================= */
+/* =====================================
+   13. TRANSIÇÃO DO MODO CLARO/ESCURO
+   Suaviza as mudanças de cores.
+===================================== */
 
 .about-section,
 .courses-section,
@@ -883,80 +737,59 @@ h2 {
 .course-details,
 .contact-form,
 .course-card,
+.news-card,
+.theme-button,
+.form-group input,
+.form-group textarea {
+    transition: background-color 0.4s ease,
+                color 0.4s ease,
+                border-color 0.4s ease;
+}
+
+/* Mantém o movimento dos cartões */
+
+.course-card,
 .news-card {
-  transition:
-    background-color 0.4s ease,
-    color 0.4s ease,
-    border-color 0.4s ease;
-}
-
-/* Mantém os efeitos de movimento dos cartões */
-
-.course-card {
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    background-color 0.4s ease,
-    border-color 0.4s ease;
-}
-
-.news-card {
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    background-color 0.4s ease,
-    border-color 0.4s ease;
+    transition: transform 0.3s ease-out,
+                background-color 0.4s ease,
+                border-color 0.4s ease;
 }
 
 
-/* =========================================
+/* =====================================
    14. RESPONSIVIDADE
-   Media queries adaptam o layout
-   a diferentes tamanhos de ecrã.
-========================================= */
+   Media queries adaptam o site.
+===================================== */
 
 
 /* TABLETS */
 
 @media (max-width: 1000px) {
 
-  .header-content {
-    flex-wrap: wrap;
-    padding: 15px 0;
-  }
+    .header-content {
+        flex-wrap: wrap;
+    }
 
-  .main-nav {
-    order: 3;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+    .main-nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
 
-  .hero-content {
-    gap: 35px;
-  }
+    .hero-text h1 {
+        font-size: 50px;
+    }
 
-  .hero-text h1 {
-    font-size: 58px;
-  }
+    .hero-content,
+    .about-grid,
+    .contact-grid {
+        gap: 30px;
+    }
 
-  .hero-image img {
-    height: 420px;
-  }
+    /* Os cursos passam para duas colunas */
 
-  .about-grid {
-    gap: 35px;
-  }
-
-  /* Quatro cursos passam para duas colunas */
-
-  .courses-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .contact-grid {
-    gap: 35px;
-  }
+    .courses-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
 }
 
@@ -965,144 +798,112 @@ h2 {
 
 @media (max-width: 700px) {
 
-  .container {
-    width: 90%;
-  }
+    .section {
+        padding: 60px 0;
+    }
 
-  .section {
-    padding: 65px 0;
-  }
+    .section-heading h2 {
+        font-size: 34px;
+    }
 
-  .section-heading {
-    margin-bottom: 35px;
-  }
+    /* Cabeçalho em coluna */
 
-  .section-heading h2 {
-    font-size: 38px;
-  }
+    .header-content {
+        flex-direction: column;
+    }
 
-  /* Cabeçalho em formato vertical */
+    .main-nav {
+        justify-content: center;
+        gap: 12px;
+    }
 
-  .header-content {
-    flex-direction: column;
-    gap: 18px;
-    padding: 20px 0;
-  }
+    .main-nav a {
+        font-size: 12px;
+    }
 
-  .main-nav {
-    order: 0;
-    gap: 15px;
-  }
+    /* Hero com uma coluna */
 
-  .main-nav a {
-    font-size: 12px;
-  }
+    .hero {
+        padding: 50px 0;
+    }
 
-  .theme-button {
-    padding: 8px 14px;
-  }
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
 
-  /* Hero passa de duas colunas para uma */
+    .hero-text h1 {
+        font-size: 45px;
+    }
 
-  .hero {
-    padding: 50px 0 65px;
-  }
+    .hero-image img {
+        height: 300px;
+    }
 
-  .hero-content {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
+    /* Sobre o centro com uma coluna */
 
-  .hero-text h1 {
-    font-size: 52px;
-  }
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
 
-  .hero-description {
-    font-size: 15px;
-  }
+    .about-image img {
+        height: 300px;
+    }
 
-  .hero-image img {
-    height: 350px;
-  }
+    .about-info {
+        flex-direction: column;
+    }
 
-  /* Sobre nós passa para uma coluna */
+    /* Cursos com uma coluna */
 
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
 
-  .about-image img {
-    height: 330px;
-  }
+    .course-card {
+        min-height: auto;
+    }
 
-  .about-text h3 {
-    font-size: 27px;
-  }
+    /* Galeria com imagens menores */
 
-  .about-info {
-    grid-template-columns: 1fr;
-  }
+    .gallery-scroll figure {
+        min-width: 250px;
+    }
 
-  /* Cursos passam para uma coluna */
+    .gallery-scroll img {
+        width: 250px;
+        height: 200px;
+    }
 
-  .courses-grid {
-    grid-template-columns: 1fr;
-  }
+    /* Notícias com uma coluna */
 
-  .course-card {
-    min-height: auto;
-  }
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
 
-  .course-details {
-    padding: 25px;
-  }
+    .news-card {
+        min-height: auto;
+    }
 
-  /* Galeria com fotografias menores */
+    /* Contactos com uma coluna */
 
-  .gallery-scroll figure {
-    flex-basis: 280px;
-  }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
 
-  .gallery-scroll img {
-    height: 240px;
-  }
+    /* Rodapé em coluna */
 
-  /* Notícias passam para uma coluna */
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-  .news-grid {
-    grid-template-columns: 1fr;
-  }
+    .footer-nav {
+        flex-direction: column;
+    }
 
-  .news-card {
-    min-height: auto;
-  }
-
-  /* Contactos passam para uma coluna */
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-form {
-    padding: 25px;
-  }
-
-  /* Rodapé adaptado ao telemóvel */
-
-  .footer-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .footer-nav {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 8px;
-  }
+    .footer-bottom {
+        flex-direction: column;
+    }
 
 }
 
@@ -1111,29 +912,16 @@ h2 {
 
 @media (max-width: 400px) {
 
-  .hero-text h1 {
-    font-size: 43px;
-  }
+    .hero-text h1 {
+        font-size: 38px;
+    }
 
-  .section-heading h2 {
-    font-size: 32px;
-  }
+    .hero-buttons {
+        flex-direction: column;
+    }
 
-  .hero-buttons {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .btn {
-    width: 100%;
-  }
-
-  .gallery-scroll figure {
-    flex-basis: 240px;
-  }
-
-  .gallery-scroll img {
-    height: 210px;
-  }
+    .section-heading h2 {
+        font-size: 30px;
+    }
 
 }
