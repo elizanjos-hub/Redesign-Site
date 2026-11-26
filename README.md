@@ -15,7 +15,7 @@ Procurei aplicar os conteúdos que fomos aprendendo nas aulas, tanto na organiza
 
 O projeto está disponível no GitHub Pages:
 
-https://elizanjos-hub.github.io/Redesign-IEFP/
+https://elizanjos-hub.github.io/Redesign-Site/
 
 3. Conceito visual
 
