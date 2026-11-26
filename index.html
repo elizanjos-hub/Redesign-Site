@@ -7,13 +7,22 @@
 
     <title>IEFP Rio Meão | Aprender transforma</title>
 
+    <!-- Fontes utilizadas no projeto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap"
+        rel="stylesheet"
+    >
+
     <!-- Ligação ao CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- Checkbox para alternar entre os modos claro e escuro -->
+    <!-- Checkbox que permite mudar o tema sem JavaScript -->
     <input type="checkbox" id="theme-toggle" class="theme-toggle">
 
     <div class="site">
@@ -23,14 +32,15 @@
 
             <div class="container header-content">
 
-                <!-- Logotipo -->
                 <a href="#inicio" class="logo">
-                    <img src="images/logo-completo.jpg" alt="Logotipo do IEFP">
-                    <span>Rio Meão</span>
+                    <img
+                        src="images/logo-completo.jpg"
+                        alt="Logotipo do IEFP"
+                    >
+                    <span class="logo-place">RIO MEÃO</span>
                 </a>
 
-                <!-- Menu -->
-                <nav class="main-nav">
+                <nav class="main-nav" aria-label="Navegação principal">
                     <a href="#inicio">Início</a>
                     <a href="#sobre">O centro</a>
                     <a href="#formacoes">Formações</a>
@@ -38,7 +48,6 @@
                     <a href="#contactos">Contactos</a>
                 </nav>
 
-                <!-- Botão do modo noturno -->
                 <label for="theme-toggle" class="theme-button">
                     <span class="theme-light">☾ Modo noturno</span>
                     <span class="theme-dark">☀ Modo diurno</span>
@@ -47,7 +56,6 @@
             </div>
 
         </header>
-
 
         <main>
 
@@ -64,7 +72,7 @@
 
                         <h1>
                             O futuro<br>
-                            começa aqui<span class="highlight">.</span>
+                            <em>começa</em> aqui<span class="highlight">.</span>
                         </h1>
 
                         <p class="hero-description">
@@ -76,11 +84,13 @@
                         <div class="hero-buttons">
 
                             <a href="#formacoes" class="btn btn-primary">
-                                Explorar formações ↗
+                                Explorar formações
+                                <span aria-hidden="true">↗</span>
                             </a>
 
                             <a href="#sobre" class="btn btn-secondary">
                                 Conhecer o centro
+                                <span aria-hidden="true">↗</span>
                             </a>
 
                         </div>
@@ -88,18 +98,35 @@
                     </div>
 
                     <div class="hero-image">
-
                         <img
                             src="images/entrada.jpg"
                             alt="Entrada do centro de formação do IEFP"
                         >
-
                     </div>
 
                 </div>
 
             </section>
 
+            <!-- FAIXA VERDE -->
+            <div class="values-strip">
+
+                <div class="container values-content">
+
+                    <span>APRENDER</span>
+                    <b aria-hidden="true">✳</b>
+
+                    <span>EXPERIMENTAR</span>
+                    <b aria-hidden="true">✳</b>
+
+                    <span>EVOLUIR</span>
+                    <b aria-hidden="true">✳</b>
+
+                    <span>CONSTRUIR</span>
+
+                </div>
+
+            </div>
 
             <!-- 2. SOBRE O CENTRO -->
             <section class="section about-section" id="sobre">
@@ -108,9 +135,14 @@
 
                     <div class="section-heading">
 
-                        <p class="section-label">01 / O CENTRO</p>
+                        <p class="section-label">
+                            01 / O CENTRO
+                        </p>
 
-                        <h2>Muito mais do que formação.</h2>
+                        <h2>
+                            Muito mais do que<br>
+                            <em>formação.</em>
+                        </h2>
 
                     </div>
 
@@ -126,6 +158,10 @@
                         </div>
 
                         <div class="about-text">
+
+                            <span class="about-symbol" aria-hidden="true">
+                                ✳
+                            </span>
 
                             <h3>
                                 Aprender na prática.
@@ -180,7 +216,6 @@
 
             </section>
 
-
             <!-- 3. OFERTA FORMATIVA -->
             <section class="section courses-section" id="formacoes">
 
@@ -192,7 +227,10 @@
                             02 / OFERTA FORMATIVA
                         </p>
 
-                        <h2>Escolhe o teu próximo passo.</h2>
+                        <h2>
+                            Escolhe o teu
+                            <em>próximo<br>passo.</em>
+                        </h2>
 
                         <p>
                             Descobre diferentes áreas de formação
@@ -201,9 +239,8 @@
 
                     </div>
 
-                    <!-- Cartões dos cursos -->
+                    <!-- CARTÕES DAS FORMAÇÕES -->
                     <div class="courses-grid">
-
 
                         <!-- CURSO 1 -->
                         <article class="course-card">
@@ -238,7 +275,6 @@
 
                         </article>
 
-
                         <!-- CURSO 2 -->
                         <article class="course-card">
 
@@ -272,7 +308,6 @@
 
                         </article>
 
-
                         <!-- CURSO 3 -->
                         <article class="course-card">
 
@@ -305,7 +340,6 @@
                             </a>
 
                         </article>
-
 
                         <!-- CURSO 4 -->
                         <article class="course-card">
@@ -342,8 +376,7 @@
 
                     </div>
 
-
-                    <!-- Informação adicional -->
+                    <!-- INFORMAÇÕES ADICIONAIS -->
                     <div class="course-details" id="detalhes-formacoes">
 
                         <h3>
@@ -373,7 +406,6 @@
 
             </section>
 
-
             <!-- 4. GALERIA -->
             <section class="section gallery-section" id="galeria">
 
@@ -385,7 +417,9 @@
                             03 / VIDA NO CENTRO
                         </p>
 
-                        <h2>A formação acontece aqui.</h2>
+                        <h2>
+                            A formação acontece aqui.
+                        </h2>
 
                         <p>
                             Conhece alguns momentos de aprendizagem,
@@ -409,7 +443,6 @@
 
                         </figure>
 
-
                         <figure>
 
                             <img
@@ -422,7 +455,6 @@
                             </figcaption>
 
                         </figure>
-
 
                         <figure>
 
@@ -437,7 +469,6 @@
 
                         </figure>
 
-
                         <figure>
 
                             <img
@@ -450,7 +481,6 @@
                             </figcaption>
 
                         </figure>
-
 
                         <figure>
 
@@ -475,124 +505,117 @@
 
             </section>
 
-
             <!-- 5. NOTÍCIAS -->
-<section class="section news-section" id="noticias">
+            <section class="section news-section" id="noticias">
 
-    <div class="container">
+                <div class="container">
 
-        <div class="section-heading">
+                    <div class="section-heading">
 
-            <p class="section-label">
-                04 / ACONTECE NO IEFP
-            </p>
+                        <p class="section-label">
+                            04 / ACONTECE NO IEFP
+                        </p>
 
-            <h2>
-                Ideias, pessoas e oportunidades.
-            </h2>
+                        <h2>
+                            Ideias, pessoas e oportunidades.
+                        </h2>
 
-        </div>
+                    </div>
 
-        <div class="news-grid">
+                    <div class="news-grid">
 
-            <!-- NOTÍCIA 1 -->
-            <article class="news-card">
+                        <!-- NOTÍCIA 1 -->
+                        <article class="news-card">
 
-                <img
-                    src="images/evento-comunidade.jpg"
-                    alt="Atividade realizada no IEFP"
-                    class="news-image"
-                >
+                            <img
+                                src="images/evento-comunidade.jpg"
+                                alt="Atividade realizada no IEFP"
+                                class="news-image"
+                            >
 
-                <p class="news-date">
-                    10 NOV 2026
-                </p>
+                            <p class="news-date">
+                                10 NOV 2026
+                            </p>
 
-                <h3>
-                    Aprender através da prática
-                </h3>
+                            <h3>
+                                Aprender através da prática
+                            </h3>
 
-                <p>
-                    A formação prática permite desenvolver
-                    competências e aproximar os formandos
-                    dos desafios do mercado de trabalho.
-                </p>
+                            <p>
+                                A formação prática permite desenvolver
+                                competências e aproximar os formandos
+                                dos desafios do mercado de trabalho.
+                            </p>
 
-                <span class="news-category">
-                    FORMAÇÃO
-                </span>
+                            <span class="news-category">
+                                FORMAÇÃO
+                            </span>
 
-            </article>
+                        </article>
 
+                        <!-- NOTÍCIA 2 -->
+                        <article class="news-card">
 
-            <!-- NOTÍCIA 2 -->
-            <article class="news-card">
+                            <img
+                                src="images/evento-digital.jpg"
+                                alt="Atividade de formação digital"
+                                class="news-image"
+                            >
 
-                <img
-                    src="images/evento-digital.jpg"
-                    alt="Atividade de formação digital"
-                    class="news-image"
-                >
+                            <p class="news-date">
+                                15 NOV 2026
+                            </p>
 
-                <p class="news-date">
-                    15 NOV 2026
-                </p>
+                            <h3>
+                                Competências para o futuro digital
+                            </h3>
 
-                <h3>
-                    Competências para o futuro digital
-                </h3>
+                            <p>
+                                As ferramentas digitais e a criatividade
+                                representam novas oportunidades de
+                                aprendizagem em diferentes profissões.
+                            </p>
 
-                <p>
-                    As ferramentas digitais e a criatividade
-                    representam novas oportunidades de
-                    aprendizagem em diferentes profissões.
-                </p>
+                            <span class="news-category">
+                                TECNOLOGIA
+                            </span>
 
-                <span class="news-category">
-                    TECNOLOGIA
-                </span>
+                        </article>
 
-            </article>
+                        <!-- NOTÍCIA 3 -->
+                        <article class="news-card">
 
+                            <img
+                                src="images/evento-criativo.jpg"
+                                alt="Atividade criativa no IEFP"
+                                class="news-image"
+                            >
 
-            <!-- NOTÍCIA 3 -->
-            <article class="news-card">
+                            <p class="news-date">
+                                20 NOV 2026
+                            </p>
 
-                <img
-                    src="images/evento-criativo.jpg"
-                    alt="Atividade criativa no IEFP"
-                    class="news-image"
-                >
+                            <h3>
+                                Novos caminhos profissionais
+                            </h3>
 
-                <p class="news-date">
-                    20 NOV 2026
-                </p>
+                            <p>
+                                A qualificação profissional contribui
+                                para a valorização das pessoas e para
+                                a construção de novas oportunidades.
+                            </p>
 
-                <h3>
-                    Novos caminhos profissionais
-                </h3>
+                            <span class="news-category">
+                                EMPREGABILIDADE
+                            </span>
 
-                <p>
-                    A qualificação profissional contribui
-                    para a valorização das pessoas e para
-                    a construção de novas oportunidades.
-                </p>
+                        </article>
 
-                <span class="news-category">
-                    EMPREGABILIDADE
-                </span>
+                    </div>
 
-            </article>
+                </div>
 
-        </div>
-
-  
-        </p>
-
-    </div>
-
-</section>
-
+            </section>
 
             <!-- 6. CONTACTOS -->
             <section class="section contact-section" id="contactos">
@@ -613,6 +636,7 @@
 
                     <div class="contact-grid">
 
+                        <!-- INFORMAÇÕES DE CONTACTO -->
                         <div class="contact-info">
 
                             <h3>Vamos falar?</h3>
@@ -648,13 +672,20 @@
 
                             </div>
 
-                  
+                            <p class="contact-warning">
+                                Este website é uma proposta académica
+                                e não representa um canal oficial
+                                de contacto.
+                            </p>
 
                         </div>
 
-
-                        <!-- Formulário demonstrativo -->
-                        <form class="contact-form" action="#contactos" method="get">
+                        <!-- FORMULÁRIO DEMONSTRATIVO -->
+                        <form
+                            class="contact-form"
+                            action="#contactos"
+                            method="get"
+                        >
 
                             <div class="form-group">
 
@@ -670,7 +701,6 @@
 
                             </div>
 
-
                             <div class="form-group">
 
                                 <label for="email">Email *</label>
@@ -684,7 +714,6 @@
                                 >
 
                             </div>
-
 
                             <div class="form-group">
 
@@ -700,7 +729,6 @@
 
                             </div>
 
-
                             <div class="form-group">
 
                                 <label for="mensagem">Mensagem *</label>
@@ -715,11 +743,14 @@
 
                             </div>
 
-
-                            <button type="submit" class="btn btn-primary">
-                                Enviar mensagem ↗
+                            <button type="button" class="btn btn-primary">
+                                Formulário demonstrativo ↗
                             </button>
 
+                            <p class="form-note">
+                                Este formulário é apenas demonstrativo.
+                                Não envia nem guarda mensagens.
+                            </p>
 
                         </form>
 
@@ -730,7 +761,6 @@
             </section>
 
         </main>
-
 
         <!-- RODAPÉ -->
         <footer class="site-footer">
@@ -749,7 +779,7 @@
 
                 </div>
 
-                <nav class="footer-nav">
+                <nav class="footer-nav" aria-label="Navegação do rodapé">
 
                     <a href="#inicio">Início</a>
                     <a href="#sobre">O centro</a>
